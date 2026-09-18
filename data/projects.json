@@ -1,0 +1,117 @@
+{
+  "projects": [
+    {
+      "id": "autoshedevrum",
+      "featured": true,
+      "category": "ai",
+      "type": "AI Automation",
+      "icon": "zap",
+      "title": "AutoShedevrum: AI Blogger",
+      "desc": "Агент ведёт канал в Шедеврум и Telegram: ищет тренды, регенерирует промпты и публикует контент. Управление через TG-бота.",
+      "stack": "Python • PocketBase • Docker • Gemini • Telegram API",
+      "status": "live",
+      "repoUrl": "https://github.com/SerVoskanyan/AutoShedevrum-OpenSource"
+    },
+    {
+      "id": "seo-audit",
+      "featured": true,
+      "category": "ai",
+      "type": "SEO AI",
+      "icon": "search",
+      "title": "Auto SEO-Audit Agent",
+      "desc": "ИИ-агент анализирует GSC и Яндекс Вебмастер, находит проблемы и пишет рекомендации в Google Sheets.",
+      "stack": "n8n • OpenAI • Google Sheets • GSC API",
+      "status": "live",
+      "repoUrl": "https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent"
+    },
+    {
+      "id": "linkedin-jobs",
+      "featured": true,
+      "category": "ai",
+      "type": "No-Code Automation",
+      "icon": "briefcase",
+      "title": "LinkedIn Jobs Monitor",
+      "desc": "Авто-выгрузка вакансий LinkedIn → Apify → Google Sheets с фильтрацией по ключам. Workflow в репо, live-сервер снят.",
+      "stack": "n8n • Apify • LinkedIn Jobs • Google Sheets",
+      "status": "archived",
+      "repoUrl": "https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor"
+    },
+    {
+      "id": "content-intelligence",
+      "featured": false,
+      "category": "ai",
+      "type": "Content Analysis",
+      "icon": "file-text",
+      "title": "AI Content Intelligence",
+      "desc": "n8n-шаблон: HTML → Markdown → GPT-4 отчёт по контенту сайта.",
+      "stack": "n8n • GPT-4 • HTTP Request • Google Sheets",
+      "status": "archived"
+    },
+    {
+      "id": "order-system",
+      "featured": false,
+      "category": "ai",
+      "type": "Lead Capture",
+      "icon": "form-input",
+      "title": "No-Code Order System",
+      "desc": "Мост для статических сайтов: Webhook → Google Sheets + Telegram-уведомления.",
+      "stack": "n8n • Webhook • Google Sheets • Telegram",
+      "status": "archived"
+    },
+    {
+      "id": "jivo-bridge",
+      "featured": false,
+      "category": "ai",
+      "type": "Chat Automation",
+      "icon": "message-square",
+      "title": "Jivo Intelligence Bridge",
+      "desc": "Интеграция JivoSite: проброс диалогов в Google Sheets и Telegram.",
+      "stack": "n8n • JivoSite • Google Sheets • Telegram API",
+      "status": "archived"
+    },
+    {
+      "id": "email-processor",
+      "featured": false,
+      "category": "ai",
+      "type": "Email Automation",
+      "icon": "mail",
+      "title": "Intelligent Email Processor",
+      "desc": "Авто-обработка IMAP: очистка от мусора и форматирование заявок в CRM.",
+      "stack": "n8n • IMAP • JS Code • Google Sheets • Telegram",
+      "status": "archived"
+    },
+    {
+      "id": "rss-hub",
+      "featured": false,
+      "category": "ai",
+      "type": "Content Distribution",
+      "icon": "rss",
+      "title": "RSS Omni-Channel Hub",
+      "desc": "Мониторинг RSS-каналов с авто-трансляцией в Telegram.",
+      "stack": "Make.com • Telegram API • RSS Feed",
+      "status": "archived"
+    },
+    {
+      "id": "dialog-logger",
+      "featured": false,
+      "category": "ai",
+      "type": "Conversational AI",
+      "icon": "bot",
+      "title": "AI Dialog Logger (Gemini)",
+      "desc": "Telegram-ассистент с памятью: логирует диалоги и отвечает через Gemini.",
+      "stack": "n8n • Google Sheets • Gemini API • Telegram API",
+      "status": "private"
+    },
+    {
+      "id": "legacy-transformation",
+      "featured": false,
+      "category": "ai",
+      "type": "Engineering",
+      "icon": "refresh-cw",
+      "title": "Legacy Transformation",
+      "desc": "Перевод систем с 1С на современные стеки. Автоматизация отчётности и BI.",
+      "stack": "1C:Enterprise • SQL • Python",
+      "status": "private"
+    }
+  ]
+}

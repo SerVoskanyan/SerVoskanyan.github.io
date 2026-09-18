@@ -1,0 +1,51 @@
+{
+  "name": "Сергей Восканян",
+  "nameHighlight": "Восканян",
+  "title": "AI Automation Architect",
+  "tagline": "Проектирую AI-агентов и automation-пайплайны: от ETL до автономных бизнес-систем",
+  "description": "Соединяю инженерный бэкграунд (1С, Python) с 15+ годами в digital, чтобы превращать ручные процессы в автономные инструменты.",
+  "hireStatus": "Open for Hire • Remote • Senior Expert",
+  "metrics": [
+    { "value": "70%", "label": "автоматизации рутины" },
+    { "value": "AI", "label": "агенты & LLM-пайплайны" },
+    { "value": "ETL", "label": "API → PostgreSQL → BI" }
+  ],
+  "badges": [
+    "https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=for-the-badge&logo=yandex&logoColor=white",
+    "https://img.shields.io/badge/Google_Ads_Certified-4285F4?style=for-the-badge&logo=google-ads&logoColor=white",
+    "https://img.shields.io/badge/n8n_Expert-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white"
+  ],
+  "skills": "https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark",
+  "credentials": "Yandex Direct PRO • Google Expert • 1С Prof • МГУПП, Кибернетика",
+  "experience": [
+    {
+      "period": "2023 — наст. время",
+      "title": "AI Marketing & Automation Lead / IT PM",
+      "desc": "AI-агенты, ETL-пайплайны API → PostgreSQL → Looker Studio, кросс-функциональная команда.",
+      "highlights": ["−70% рутины", "SEO +40%"]
+    },
+    {
+      "period": "2014 — 2022",
+      "title": "Lead Product Manager / Digital Strategist",
+      "desc": "Масштабирование 20+ брендов (Parker, Edding, DYMO). SEO, маркетплейсы, автоматизация воронки.",
+      "highlights": ["+25–30% рост", "CPA −20%"]
+    },
+    {
+      "period": "2008 — 2013",
+      "title": "1С Developer → E-commerce Lead",
+      "desc": "Инженерная база: 1С, SQL, e-commerce операционка и автоматизация процессов.",
+      "highlights": ["1С Prof", "+30% заказов"]
+    }
+  ],
+  "contacts": {
+    "telegram": "https://t.me/Serik_V",
+    "email": "mailto:ser@voskanjan.ru",
+    "github": "https://github.com/SerVoskanyan"
+  },
+  "site": {
+    "url": "https://servoskanyan.github.io/",
+    "title": "Сергей Восканян | AI Automation Architect",
+    "description": "AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.",
+    "ogImage": "https://servoskanyan.github.io/assets/og.svg"
+  }
+}
