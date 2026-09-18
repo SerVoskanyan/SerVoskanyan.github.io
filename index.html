@@ -4,467 +4,275 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сергей Восканян | AI Automation Architect</title>
-  <meta name="description" content="AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.">
+  <meta name="description" content="AI-агенты, ETL-пайплайны и no-code автоматизация.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://servoskanyan.github.io/">
   <meta property="og:title" content="Сергей Восканян | AI Automation Architect">
-  <meta property="og:description" content="AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.">
+  <meta property="og:description" content="AI-агенты, ETL-пайплайны и no-code автоматизация.">
   <meta property="og:image" content="https://servoskanyan.github.io/assets/og.svg">
-  <meta name="twitter:card" content="summary_large_image">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #030303;
-      --card-bg: rgba(255, 255, 255, 0.03);
-      --card-hover: rgba(255, 255, 255, 0.06);
-      --border: rgba(255, 255, 255, 0.08);
+      --card-bg: rgba(255,255,255,0.03);
+      --card-hover: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.08);
       --accent: #3b82f6;
-      --accent-glow: rgba(59, 130, 246, 0.35);
-      --text-main: #ffffff;
+      --accent-glow: rgba(59,130,246,0.35);
+      --text-main: #fff;
       --text-dim: #94a3b8;
       --success: #22c55e;
-      --success-border: rgba(34, 197, 94, 0.35);
+      --success-border: rgba(34,197,94,0.35);
       --warning: #f59e0b;
       --muted: #64748b;
-      --max: 1360px;
+      --max: 1280px;
     }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-
+    * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
     body {
-      background: var(--bg);
-      color: var(--text-main);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.55;
+      font-family:'Inter',sans-serif; color:var(--text-main); background:var(--bg); line-height:1.55;
       background-image:
-        radial-gradient(circle at 10% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 42%),
-        radial-gradient(circle at 90% 100%, rgba(59, 130, 246, 0.06) 0%, transparent 40%);
+        radial-gradient(circle at 15% 10%, rgba(59,130,246,0.07) 0%, transparent 40%),
+        radial-gradient(circle at 85% 90%, rgba(59,130,246,0.05) 0%, transparent 38%);
     }
-
-    .container { width: min(var(--max), 100%); margin: 0 auto; padding: 12px 16px 40px; }
+    .container { width:min(var(--max),100%); margin:0 auto; padding:16px 20px 48px; }
+    .center-wrapper { display:flex; justify-content:center; width:100%; }
 
     .hire-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid var(--success-border);
-      font-weight: 600;
-      color: var(--success);
-      font-size: 0.82rem;
+      display:inline-flex; align-items:center; gap:8px; padding:7px 20px; border-radius:999px;
+      background:rgba(34,197,94,0.08); border:1px solid var(--success-border);
+      color:var(--success); font-weight:600; font-size:0.88rem; margin-bottom:28px;
     }
-    .hire-status i { width: 16px; height: 16px; }
+    .hire-status i { width:16px; height:16px; }
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .top-links { display: flex; gap: 8px; flex-wrap: wrap; }
-
-    .top-links a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-size: 0.8rem;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: 0.2s;
-    }
-    .top-links a:hover { color: #fff; border-color: var(--accent); }
-
-    /* Hero: 2 columns on desktop */
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(280px, 420px) 1fr;
-      gap: 24px 32px;
-      align-items: start;
-      margin-bottom: 28px;
-    }
-
+    header { text-align:center; margin-bottom:36px; animation:fadeIn .8s ease; }
     h1 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: clamp(1.85rem, 4vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.08;
-      margin-bottom: 8px;
+      font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2rem,6vw,3.6rem);
+      font-weight:800; letter-spacing:-0.04em; line-height:1.08; margin-bottom:16px;
     }
-    h1 span { color: var(--accent); }
+    h1 span { color:var(--accent); }
 
-    .hero-title { font-weight: 600; font-size: 1rem; margin-bottom: 10px; }
-    .hero-desc { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 16px; max-width: 36ch; }
+    .status-badges { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-bottom:20px; }
+    .status-badges img { height:26px; border-radius:4px; }
+
+    .hero-desc {
+      color:var(--text-dim); font-size:clamp(0.92rem,2.5vw,1.1rem);
+      max-width:720px; margin:0 auto 20px; line-height:1.6;
+    }
+    .hero-desc b { color:var(--text-main); display:block; margin-bottom:6px; font-size:1.05em; }
+
+    .skills-row { display:flex; justify-content:center; margin-bottom:24px; }
 
     .metrics-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-bottom: 16px;
+      display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+      max-width:560px; margin:0 auto 20px;
     }
-
     .metric-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 8px;
-      text-align: center;
+      background:var(--card-bg); border:1px solid var(--border); border-radius:14px;
+      padding:12px 10px; text-align:center;
     }
-    .metric-card .value {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1.1;
-    }
-    .metric-card .label {
-      font-size: 0.62rem;
-      color: var(--text-dim);
-      margin-top: 4px;
-      line-height: 1.25;
-    }
+    .metric-card .value { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.25rem; font-weight:800; color:var(--accent); }
+    .metric-card .label { font-size:0.68rem; color:var(--text-dim); margin-top:4px; line-height:1.25; }
 
-    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 0; }
-
+    .hero-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
     .cta-btn {
-      padding: 11px 20px;
-      border-radius: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.25s;
-      font-size: 0.88rem;
-      white-space: nowrap;
+      padding:12px 24px; border-radius:14px; font-weight:700; text-decoration:none;
+      display:inline-flex; align-items:center; gap:8px; font-size:0.9rem; transition:.25s;
     }
-    .cta-btn.primary { background: var(--accent); color: #fff; box-shadow: 0 6px 18px var(--accent-glow); }
-    .cta-btn.primary:hover { transform: translateY(-1px); filter: brightness(1.08); }
-    .cta-btn.secondary { background: rgba(255,255,255,0.04); border: 1px solid var(--border); color: #fff; }
-    .cta-btn.secondary:hover { background: rgba(255,255,255,0.08); }
-
-    /* Featured in hero — uses full width on desktop */
-    .hero-cases {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      min-width: 0;
-    }
-
-    .hero-cases-label {
-      grid-column: 1 / -1;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: -4px;
-    }
+    .cta-btn.primary { background:var(--accent); color:#fff; box-shadow:0 8px 20px var(--accent-glow); }
+    .cta-btn.primary:hover { transform:translateY(-2px); filter:brightness(1.08); }
+    .cta-btn.secondary { background:rgba(255,255,255,0.05); border:1px solid var(--border); color:#fff; }
+    .cta-btn.secondary:hover { background:rgba(255,255,255,0.09); }
 
     .section-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.2rem;
-      margin: 32px 0 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem;
+      margin:40px 0 20px; display:flex; align-items:center; gap:12px;
     }
-    .section-title span { flex: 1; height: 1px; background: var(--border); }
+    .section-title span { flex:1; height:1px; background:var(--border); }
 
-    .tabs-nav {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .tabs-nav::-webkit-scrollbar { display: none; }
-
+    .tabs-nav { display:flex; gap:8px; margin-bottom:18px; overflow-x:auto; scrollbar-width:none; }
+    .tabs-nav::-webkit-scrollbar { display:none; }
     .tab-btn {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      padding: 8px 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 0.82rem;
-      font-weight: 600;
-      white-space: nowrap;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: 0.2s;
+      background:var(--card-bg); border:1px solid var(--border); color:var(--text-dim);
+      padding:9px 16px; border-radius:10px; cursor:pointer; font-size:0.82rem; font-weight:600;
+      white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:.2s;
     }
-    .tab-btn i { width: 14px; height: 14px; }
-    .tab-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .tab-btn i { width:14px; height:14px; }
+    .tab-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
 
     .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      transition: opacity 0.25s ease;
+      display:grid; grid-template-columns:repeat(3,1fr); gap:16px; transition:opacity .25s;
     }
 
     .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: 0.3s;
+      background:var(--card-bg); border:1px solid var(--border); border-radius:20px;
+      padding:20px; display:flex; flex-direction:column; height:100%; transition:.35s;
     }
-    .card.hidden { display: none; }
-    .card:hover { border-color: rgba(59,130,246,0.5); background: var(--card-hover); transform: translateY(-2px); }
+    .card.hidden { display:none; }
+    .card.featured { border-color:rgba(59,130,246,0.35); background:rgba(59,130,246,0.04); }
+    .card:hover { border-color:var(--accent); background:var(--card-hover); transform:translateY(-3px); box-shadow:0 12px 32px -12px var(--accent-glow); }
 
-    .card h3 {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-dim);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .card h3 { font-size:0.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--text-dim); margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+    .card h3 i { width:13px; height:13px; color:var(--accent); }
+    .card .title { font-size:1.12rem; font-weight:700; margin-bottom:8px; line-height:1.3; }
+    .card .desc { font-size:0.88rem; color:var(--text-dim); line-height:1.5; margin-bottom:12px; flex-grow:1; }
+    .stack-info { font-size:0.72rem; font-weight:600; color:var(--accent); margin-bottom:14px; display:block; }
+    .card-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; margin-top:auto; }
+
+    .status-badge { padding:4px 10px; border-radius:6px; font-size:0.65rem; font-weight:700; text-transform:uppercase; }
+    .status-badge.live { background:rgba(34,197,94,0.12); color:var(--success); border:1px solid rgba(34,197,94,0.25); }
+    .status-badge.private { background:rgba(100,116,139,0.15); color:var(--muted); border:1px solid rgba(100,116,139,0.3); }
+    .status-badge.archived { background:rgba(245,158,11,0.1); color:var(--warning); border:1px solid rgba(245,158,11,0.25); }
+    .repo-link { display:inline-flex; text-decoration:none; }
+    .repo-link img { height:24px; border-radius:4px; }
+
+    .experience-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:16px; }
+    .exp-box { background:var(--card-bg); border:1px solid var(--border); border-radius:20px; padding:24px; }
+    .exp-header { display:flex; align-items:center; gap:8px; color:var(--text-dim); font-size:0.75rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:18px; }
+
+    .timeline { position:relative; padding-left:20px; }
+    .timeline::before { content:''; position:absolute; left:4px; top:6px; bottom:6px; width:1px; background:var(--border); }
+    .timeline-item { position:relative; margin-bottom:24px; }
+    .timeline-item:last-child { margin-bottom:0; }
+    .timeline-dot { position:absolute; left:-20px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); }
+    .timeline-date { font-size:0.78rem; font-weight:600; color:var(--accent); margin-bottom:2px; }
+    .timeline-title { font-size:1rem; font-weight:700; margin-bottom:4px; }
+    .timeline-desc { font-size:0.85rem; color:var(--text-dim); }
+    .growth-badge { display:inline-flex; padding:2px 7px; background:rgba(34,197,94,0.1); color:var(--success); border-radius:4px; font-size:0.68rem; font-weight:700; margin:4px 4px 0 0; }
+
+    .tags-container { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag-item {
+      display:flex; align-items:center; gap:6px; padding:8px 12px;
+      background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; font-size:0.8rem;
     }
-    .card h3 i { width: 13px; height: 13px; color: var(--accent); }
-    .card .title { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; line-height: 1.25; }
-    .card .desc { font-size: 0.84rem; color: var(--text-dim); line-height: 1.45; margin-bottom: 10px; flex-grow: 1; }
-    .stack-info { font-size: 0.68rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; display: block; }
-
-    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: auto; }
-
-    .status-badge {
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    .status-badge.live { background: rgba(34,197,94,0.12); color: var(--success); border: 1px solid rgba(34,197,94,0.25); }
-    .status-badge.private { background: rgba(100,116,139,0.15); color: var(--muted); border: 1px solid rgba(100,116,139,0.3); }
-    .status-badge.archived { background: rgba(245,158,11,0.1); color: var(--warning); border: 1px solid rgba(245,158,11,0.25); }
-
-    .repo-link { display: inline-flex; text-decoration: none; }
-    .repo-link img { height: 24px; border-radius: 4px; }
-
-    .meta-strip {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 16px 18px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--card-bg);
-      margin-top: 28px;
-    }
-    .meta-badges { display: flex; flex-wrap: wrap; gap: 6px; }
-    .meta-badges img { height: 24px; border-radius: 4px; }
-
-    .exp-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-    }
-
-    .timeline { position: relative; padding-left: 20px; }
-    .timeline::before { content: ''; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 1px; background: var(--border); }
-    .timeline-item { position: relative; margin-bottom: 22px; }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-dot { position: absolute; left: -20px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
-    .timeline-date { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 2px; }
-    .timeline-title { font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
-    .timeline-desc { font-size: 0.84rem; color: var(--text-dim); }
-    .growth-badge {
-      display: inline-flex;
-      padding: 2px 7px;
-      background: rgba(34,197,94,0.1);
-      color: var(--success);
-      border-radius: 4px;
-      font-size: 0.68rem;
-      font-weight: 700;
-      margin: 4px 4px 0 0;
-    }
+    .tag-item i { width:14px; color:var(--accent); }
 
     .contact-cta {
-      background: radial-gradient(circle at top right, rgba(59,130,246,0.12), transparent), var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px 24px;
-      text-align: center;
-      margin-top: 32px;
+      background:radial-gradient(circle at top right,rgba(59,130,246,0.12),transparent),var(--card-bg);
+      border:1px solid var(--border); border-radius:24px; padding:40px 28px; text-align:center; margin-top:40px;
     }
-    .contact-cta h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
-    .contact-cta p { color: var(--text-dim); margin-bottom: 20px; font-size: 0.92rem; }
-    .contact-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .contact-cta h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.75rem; font-weight:800; margin-bottom:10px; }
+    .contact-cta p { color:var(--text-dim); margin-bottom:22px; }
+    .contact-buttons { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
 
-    footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.8rem; }
-    .loading { text-align: center; color: var(--text-dim); padding: 40px 0; }
+    footer { margin-top:32px; padding-top:20px; border-top:1px solid var(--border); text-align:center; color:var(--text-dim); font-size:0.82rem; }
+    .loading { text-align:center; color:var(--text-dim); padding:40px 0; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
 
-    /* Tablet */
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-cases { grid-template-columns: 1fr; }
-      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width:1024px) {
+      .projects-grid { grid-template-columns:repeat(2,1fr); }
+      .experience-grid { grid-template-columns:1fr; }
     }
-
-    /* Mobile */
-    @media (max-width: 640px) {
-      .container { padding: 10px 12px 32px; }
-      .top-bar { margin-bottom: 14px; }
-      .top-links { width: 100%; }
-      .hero-desc { max-width: none; font-size: 0.86rem; margin-bottom: 12px; }
-      .metrics-row { gap: 6px; }
-      .metric-card { padding: 8px 4px; }
-      .metric-card .value { font-size: 1rem; }
-      .metric-card .label { font-size: 0.58rem; }
-      .hero-cases { display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory; padding-bottom: 4px; scrollbar-width: none; }
-      .hero-cases::-webkit-scrollbar { display: none; }
-      .hero-cases .card { min-width: 82vw; scroll-snap-align: start; flex-shrink: 0; }
-      .hero-cases-label { display: none; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .cta-btn { flex: 1; justify-content: center; min-width: 140px; }
-      .meta-strip { flex-direction: column; align-items: flex-start; }
+    @media (max-width:640px) {
+      .container { padding:12px 14px 36px; }
+      .hire-status { margin-bottom:18px; font-size:0.8rem; padding:6px 14px; }
+      header { margin-bottom:24px; }
+      .hero-desc { margin-bottom:14px; }
+      .metrics-row { gap:6px; max-width:100%; }
+      .metric-card { padding:8px 4px; }
+      .metric-card .value { font-size:1.05rem; }
+      .metric-card .label { font-size:0.58rem; }
+      .projects-grid { grid-template-columns:1fr; }
+      .cta-btn { flex:1; justify-content:center; min-width:130px; }
+      .section-title { margin:28px 0 16px; }
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <div id="app"><p class="loading">Загрузка…</p></div>
-</div>
+<div class="container"><div id="app"><p class="loading">Загрузка…</p></div></div>
 
 <script id="profile-data" type="application/json">
-{"name":"Сергей Восканян","nameHighlight":"Восканян","title":"AI Automation Architect","tagline":"AI-агенты, ETL и no-code автоматизация — снимаю до 70% рутины","hireStatus":"Open for Hire • Remote • Senior","metrics":[{"value":"70%","label":"автоматизации"},{"value":"AI","label":"агенты & LLM"},{"value":"ETL","label":"API→PG→BI"}],"badges":["https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=flat-square&logo=yandex&logoColor=white","https://img.shields.io/badge/Google_Ads-4285F4?style=flat-square&logo=google-ads&logoColor=white","https://img.shields.io/badge/n8n-FF6D5A?style=flat-square&logo=n8n&logoColor=white"],"skills":"https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark","credentials":"Yandex Direct PRO • Google Expert • 1С Prof • МГУПП","experience":[{"period":"2023 — наст. время","title":"AI Automation Lead / IT PM","desc":"AI-агенты, ETL API → PostgreSQL → Looker Studio.","highlights":["−70% рутины","SEO +40%"]},{"period":"2014 — 2022","title":"Lead PM / Digital Strategist","desc":"20+ брендов (Parker, Edding, DYMO). SEO, маркетплейсы.","highlights":["+25–30%","CPA −20%"]},{"period":"2008 — 2013","title":"1С Developer → E-commerce Lead","desc":"1С, SQL, e-commerce, автоматизация процессов.","highlights":["1С Prof","+30% заказов"]}],"contacts":{"telegram":"https://t.me/Serik_V","email":"mailto:ser@voskanjan.ru","github":"https://github.com/SerVoskanyan"},"site":{"url":"https://servoskanyan.github.io/","title":"Сергей Восканян | AI Automation Architect","description":"AI-агенты, ETL-пайплайны и no-code автоматизация.","ogImage":"https://servoskanyan.github.io/assets/og.svg"}}
+{"name":"Сергей Восканян","nameHighlight":"Восканян","title":"AI Automation Architect & Technical PM","tagline":"Архитектор умных систем: от ETL-пайплайнов до AI-агентов. Соединяю инженерный подход и 15 лет в digital, чтобы превращать хаос в автономный бизнес-инструмент.","hireStatus":"Open for Hire • Remote • Senior Expert","metrics":[{"value":"70%","label":"автоматизации рутины"},{"value":"AI","label":"агенты & LLM"},{"value":"ETL","label":"API → PostgreSQL → BI"}],"badges":["https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=for-the-badge&logo=yandex&logoColor=white","https://img.shields.io/badge/Google_Ads_Certified-4285F4?style=for-the-badge&logo=google-ads&logoColor=white","https://img.shields.io/badge/n8n_Expert-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white"],"skills":"https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark","credentials":["МГУПП: Кибернетика","Яндекс.Директ PRO","Google Expert","1С:Предприятие 8.1"],"experience":[{"period":"2023 — наст. время","title":"AI Marketing & Automation Lead / IT PM","desc":"AI-агенты, ETL API → PostgreSQL → Looker Studio.","highlights":["−70% рутины","SEO +40%"]},{"period":"2014 — 2022","title":"Lead Product Manager / Digital Strategist","desc":"20+ брендов (Parker, Edding, DYMO). SEO, маркетплейсы.","highlights":["+25–30%","CPA −20%"]},{"period":"2008 — 2013","title":"1С Developer → E-commerce Lead","desc":"1С, SQL, e-commerce, автоматизация процессов.","highlights":["1С Prof","+30% заказов"]}],"contacts":{"telegram":"https://t.me/Serik_V","email":"mailto:ser@voskanjan.ru","github":"https://github.com/SerVoskanyan"},"site":{"title":"Сергей Восканян | AI Automation Architect","description":"AI-агенты, ETL-пайплайны и no-code автоматизация."}}
 </script>
-<script id="projects-data" type="application/json">{"projects":[{"id":"autoshedevrum","featured":true,"category":"ai","type":"AI Automation","icon":"zap","title":"AutoShedevrum: AI Blogger","desc":"Агент ведёт канал в Шедеврум и Telegram. Управление через TG-бота.","stack":"Python • PocketBase • Gemini • Telegram","status":"live","repoUrl":"https://github.com/SerVoskanyan/AutoShedevrum-OpenSource"},{"id":"seo-audit","featured":true,"category":"ai","type":"SEO AI","icon":"search","title":"Auto SEO-Audit Agent","desc":"GSC + Яндекс Вебмастер → рекомендации в Google Sheets.","stack":"n8n • OpenAI • GSC API","status":"live","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent"},{"id":"linkedin-jobs","featured":true,"category":"ai","type":"No-Code","icon":"briefcase","title":"LinkedIn Jobs Monitor","desc":"LinkedIn → Apify → Sheets. Workflow в репо.","stack":"n8n • Apify • Sheets","status":"archived","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor"},{"id":"content-intelligence","featured":false,"category":"ai","type":"Content Analysis","icon":"file-text","title":"AI Content Intelligence","desc":"HTML → Markdown → GPT-4 отчёт.","stack":"n8n • GPT-4 • Sheets","status":"archived"},{"id":"order-system","featured":false,"category":"ai","type":"Lead Capture","icon":"form-input","title":"No-Code Order System","desc":"Webhook → Sheets + Telegram.","stack":"n8n • Webhook • Telegram","status":"archived"},{"id":"jivo-bridge","featured":false,"category":"ai","type":"Chat Automation","icon":"message-square","title":"Jivo Intelligence Bridge","desc":"JivoSite → Sheets + Telegram.","stack":"n8n • JivoSite • Telegram","status":"archived"},{"id":"email-processor","featured":false,"category":"ai","type":"Email Automation","icon":"mail","title":"Intelligent Email Processor","desc":"IMAP → очистка → CRM.","stack":"n8n • IMAP • Telegram","status":"archived"},{"id":"rss-hub","featured":false,"category":"ai","type":"Content Distribution","icon":"rss","title":"RSS Omni-Channel Hub","desc":"RSS → Telegram.","stack":"Make.com • RSS","status":"archived"},{"id":"dialog-logger","featured":false,"category":"ai","type":"Conversational AI","icon":"bot","title":"AI Dialog Logger","desc":"TG-ассистент с памятью, Gemini.","stack":"n8n • Gemini • Telegram","status":"private"},{"id":"legacy-transformation","featured":false,"category":"ai","type":"Engineering","icon":"refresh-cw","title":"Legacy Transformation","desc":"1С → современные стеки, BI.","stack":"1C • SQL • Python","status":"private"}]}</script>
+<script id="projects-data" type="application/json">{"projects":[{"id":"autoshedevrum","featured":true,"category":"ai","type":"AI Automation","icon":"zap","title":"AutoShedevrum: AI Blogger","desc":"Агент ведёт канал в Шедеврум и Telegram. Автоматически ищет тренды, регенерирует промпты и публикует контент. Управление через TG-бота.","stack":"Python • PocketBase • Docker • Gemini • Telegram API","status":"live","repoUrl":"https://github.com/SerVoskanyan/AutoShedevrum-OpenSource"},{"id":"seo-audit","featured":true,"category":"ai","type":"SEO AI","icon":"search","title":"Auto SEO-Audit Agent","desc":"ИИ-агент анализирует GSC и Яндекс Вебмастер, находит проблемы и пишет рекомендации в Google Sheets.","stack":"n8n • OpenAI • Google Sheets • GSC API","status":"live","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent"},{"id":"linkedin-jobs","featured":true,"category":"ai","type":"No-Code Solution","icon":"briefcase","title":"LinkedIn Jobs Monitor","desc":"Авто-выгрузка вакансий LinkedIn → Apify → Google Sheets. Workflow в репо, live-сервер снят.","stack":"n8n • Apify • LinkedIn Jobs • Google Sheets","status":"archived","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor"},{"id":"content-intelligence","featured":false,"category":"ai","type":"Content Analysis","icon":"file-text","title":"AI Content Intelligence","desc":"n8n-шаблон: HTML → Markdown → GPT-4 отчёт по контенту сайта.","stack":"n8n • GPT-4 • HTTP Request • Google Sheets","status":"archived"},{"id":"order-system","featured":false,"category":"ai","type":"Lead Capture","icon":"form-input","title":"No-Code Order System","desc":"Мост для статических сайтов: Webhook → Google Sheets + TG уведомления.","stack":"n8n • Webhook • Google Sheets • Telegram","status":"archived"},{"id":"jivo-bridge","featured":false,"category":"ai","type":"Chat Automation","icon":"message-square","title":"Jivo Intelligence Bridge","desc":"Интеграция JivoSite: проброс диалогов в Google Sheets и Telegram.","stack":"n8n • JivoSite • Google Sheets • Telegram API","status":"archived"},{"id":"email-processor","featured":false,"category":"ai","type":"Email Automation","icon":"mail","title":"Intelligent Email Processor","desc":"Авто-обработка IMAP: очистка от мусора и форматирование заявок в CRM.","stack":"n8n • IMAP • JS Code • Google Sheets • Telegram","status":"archived"},{"id":"rss-hub","featured":false,"category":"ai","type":"Content Distribution","icon":"rss","title":"RSS Omni-Channel Hub","desc":"Мониторинг RSS-каналов с авто-трансляцией в Telegram.","stack":"Make.com • Telegram API • RSS Feed","status":"archived"},{"id":"dialog-logger","featured":false,"category":"ai","type":"Conversational AI","icon":"bot","title":"AI Dialog Logger (Gemini)","desc":"Telegram-ассистент с памятью: логирует диалоги и отвечает через Gemini.","stack":"n8n • Google Sheets • Gemini API • Telegram API","status":"private"},{"id":"legacy-transformation","featured":false,"category":"ai","type":"Engineering","icon":"refresh-cw","title":"Legacy Transformation","desc":"Перевод систем с 1С на современные стеки. Автоматизация отчётности и BI.","stack":"1C:Enterprise • SQL • Python","status":"private"}]}</script>
 
 <script>
-  const STATUS_LABELS = { live: 'Live', private: 'Private', archived: 'Archived' };
+  const STATUS = { live:'Live', private:'Private', archived:'Archived' };
 
-  function renderStatusBadge(s) {
-    return `<span class="status-badge ${s}">${STATUS_LABELS[s] || s}</span>`;
-  }
+  const renderCard = p => `<article class="card${p.featured?' featured':''}" data-category="${p.category}">
+    <div><h3><i data-lucide="${p.icon}"></i> ${p.type}</h3>
+    <div class="title">${p.title}</div><div class="desc">${p.desc}</div>
+    <span class="stack-info">${p.stack}</span></div>
+    <div class="card-footer">
+      <span class="status-badge ${p.status}">${STATUS[p.status]||p.status}</span>
+      ${p.repoUrl?`<a href="${p.repoUrl}" target="_blank" rel="noopener" class="repo-link"><img src="https://img.shields.io/badge/VIEW_REPO-181717?style=for-the-badge&logo=github" alt="repo"/></a>`:''}
+    </div></article>`;
 
-  function renderRepoLink(p) {
-    return p.repoUrl ? `<a href="${p.repoUrl}" target="_blank" rel="noopener" class="repo-link"><img src="https://img.shields.io/badge/REPO-181717?style=flat-square&logo=github" alt="repo" /></a>` : '';
-  }
-
-  function renderCard(p) {
-    return `<article class="card" data-category="${p.category}" data-id="${p.id}">
-      <div><h3><i data-lucide="${p.icon}"></i> ${p.type}</h3>
-      <div class="title">${p.title}</div><div class="desc">${p.desc}</div>
-      <span class="stack-info">${p.stack}</span></div>
-      <div class="card-footer">${renderStatusBadge(p.status)}${renderRepoLink(p)}</div>
-    </article>`;
-  }
-
-  function renderExperience(items) {
-    return items.map((item, i) => `<div class="timeline-item">
-      <div class="timeline-dot" style="${i ? 'background:var(--text-dim)' : ''}"></div>
-      <div class="timeline-date" style="${i ? 'color:var(--text-dim)' : ''}">${item.period}</div>
-      <div class="timeline-title">${item.title}</div>
-      <div class="timeline-desc">${item.desc}${(item.highlights||[]).map(h=>`<span class="growth-badge">${h}</span>`).join('')}</div>
-    </div>`).join('');
-  }
+  const renderTimeline = items => items.map((it,i)=>`<div class="timeline-item">
+    <div class="timeline-dot" style="${i?'background:var(--text-dim)':''}"></div>
+    <div class="timeline-date" style="${i?'color:var(--text-dim)':''}">${it.period}</div>
+    <div class="timeline-title">${it.title}</div>
+    <div class="timeline-desc">${it.desc}${(it.highlights||[]).map(h=>`<span class="growth-badge">${h}</span>`).join('')}</div>
+  </div>`).join('');
 
   function renderPage(profile, projects) {
-    const featured = projects.filter(p => p.featured);
     document.title = profile.site.title;
+    const sorted = [...projects].sort((a,b) => (b.featured?1:0) - (a.featured?1:0));
+    const creds = Array.isArray(profile.credentials) ? profile.credentials : [profile.credentials];
 
     document.getElementById('app').innerHTML = `
-      <div class="top-bar">
+      <div class="center-wrapper">
         <div class="hire-status"><i data-lucide="check-circle-2"></i> ${profile.hireStatus}</div>
-        <div class="top-links">
-          <a href="${profile.contacts.telegram}" target="_blank" rel="noopener">Telegram</a>
-          <a href="${profile.contacts.email}">Email</a>
-          <a href="${profile.contacts.github}" target="_blank" rel="noopener">GitHub</a>
-        </div>
       </div>
 
-      <section class="hero-grid">
-        <div class="hero-left">
-          <h1>Сергей <span>${profile.nameHighlight}</span></h1>
-          <p class="hero-title">${profile.title}</p>
-          <p class="hero-desc">${profile.tagline}</p>
-          <div class="metrics-row">${profile.metrics.map(m=>`<div class="metric-card"><div class="value">${m.value}</div><div class="label">${m.label}</div></div>`).join('')}</div>
-          <div class="hero-actions">
-            <a href="#cases" class="cta-btn primary"><i data-lucide="folder-open"></i> Все кейсы</a>
-            <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="send"></i> Написать</a>
-          </div>
+      <header>
+        <h1>Сергей <span>${profile.nameHighlight}</span></h1>
+        <div class="status-badges">${profile.badges.map(b=>`<img src="${b}" alt=""/>`).join('')}</div>
+        <p class="hero-desc"><b>${profile.title}</b>${profile.tagline}</p>
+        <div class="skills-row"><img src="${profile.skills}" alt="Skills"/></div>
+        <div class="metrics-row">${profile.metrics.map(m=>`<div class="metric-card"><div class="value">${m.value}</div><div class="label">${m.label}</div></div>`).join('')}</div>
+        <div class="hero-actions">
+          <a href="#cases" class="cta-btn primary"><i data-lucide="folder-open"></i> Смотреть кейсы</a>
+          <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="send"></i> Telegram</a>
         </div>
-        <div class="hero-cases" id="hero-cases">
-          <div class="hero-cases-label">Featured Cases</div>
-          ${featured.map(p => renderCard(p)).join('')}
-        </div>
-      </section>
+      </header>
 
-      <div class="section-title" id="cases"><span></span> Все проекты <span></span></div>
+      <div class="section-title" id="cases"><span></span> Кейсы & Проекты <span></span></div>
       <div class="tabs-nav">
         <button class="tab-btn active" data-filter="all"><i data-lucide="layout-grid"></i> Все</button>
         <button class="tab-btn" data-filter="ai"><i data-lucide="zap"></i> AI & Automation</button>
       </div>
-      <div class="projects-grid" id="projects-grid">${projects.map(p=>renderCard(p)).join('')}</div>
+      <div class="projects-grid" id="projects-grid">${sorted.map(renderCard).join('')}</div>
 
-      <div class="meta-strip">
-        <div class="meta-badges">${profile.badges.map(b=>`<img src="${b}" alt="" />`).join('')}</div>
-        <img src="${profile.skills}" alt="Skills" />
+      <div class="section-title"><span></span> Карьерный путь <span></span></div>
+      <div class="experience-grid">
+        <div class="exp-box">
+          <div class="exp-header"><i data-lucide="history"></i> опыт по годам</div>
+          <div class="timeline">${renderTimeline(profile.experience)}</div>
+        </div>
+        <div class="exp-box">
+          <div class="exp-header"><i data-lucide="graduation-cap"></i> образование & сертификаты</div>
+          <div class="tags-container">${creds.map(c=>`<div class="tag-item"><i data-lucide="check-circle"></i> ${c}</div>`).join('')}</div>
+        </div>
       </div>
 
-      <div class="section-title"><span></span> Опыт <span></span></div>
-      <div class="exp-box"><div class="timeline">${renderExperience(profile.experience)}</div></div>
-      <p style="text-align:center;color:var(--text-dim);font-size:0.82rem;margin-top:12px;">${profile.credentials}</p>
-
       <div class="contact-cta">
-        <h2>Давайте автоматизируем процесс</h2>
-        <p>AI-агенты, ETL, n8n — обсудим ваш кейс.</p>
+        <h2>Давайте создадим что-то крутое</h2>
+        <p>Ищете архитектора для автоматизации бизнеса или внедрения AI? Я на связи.</p>
         <div class="contact-buttons">
           <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn primary"><i data-lucide="send"></i> Telegram</a>
           <a href="${profile.contacts.email}" class="cta-btn secondary"><i data-lucide="mail"></i> Email</a>
           <a href="${profile.contacts.github}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="github"></i> GitHub</a>
         </div>
       </div>
-      <footer><p>© 2026 ${profile.name} • ${profile.title}</p></footer>
-    `;
-    lucide.createIcons();
-    initFilters();
-  }
+      <footer><p>© 2026 ${profile.name} • ${profile.title}</p></footer>`;
 
-  function initFilters() {
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const f = btn.dataset.filter;
-        const grid = document.getElementById('projects-grid');
-        grid.style.opacity = '0';
-        setTimeout(() => {
-          grid.querySelectorAll('.card').forEach(c => {
-            c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f);
-          });
-          grid.style.opacity = '1';
-        }, 150);
-      });
-    });
+    lucide.createIcons();
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter, grid = document.getElementById('projects-grid');
+      grid.style.opacity = '0';
+      setTimeout(() => {
+        grid.querySelectorAll('.card').forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f));
+        grid.style.opacity = '1';
+      }, 150);
+    }));
   }
 
   async function loadJson(url, id) {
-    try {
-      const r = await fetch(url);
-      if (!r.ok) throw 0;
-      return await r.json();
-    } catch {
-      return JSON.parse(document.getElementById(id).textContent);
-    }
+    try { const r = await fetch(url); if (!r.ok) throw 0; return await r.json(); }
+    catch { return JSON.parse(document.getElementById(id).textContent); }
   }
 
   async function init() {
@@ -472,9 +280,7 @@
       const profile = await loadJson('./data/profile.json', 'profile-data');
       const { projects } = await loadJson('./data/projects.json', 'projects-data');
       renderPage(profile, projects);
-    } catch (e) {
-      document.getElementById('app').innerHTML = '<p class="loading">Ошибка загрузки. Запустите <code>./serve.sh</code></p>';
-    }
+    } catch { document.getElementById('app').innerHTML = '<p class="loading">Ошибка. Запустите <code>./serve.sh</code></p>'; }
   }
   init();
 </script>
