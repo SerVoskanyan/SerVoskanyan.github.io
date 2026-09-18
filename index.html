@@ -11,155 +11,177 @@
   <meta property="og:description" content="AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.">
   <meta property="og:image" content="https://servoskanyan.github.io/assets/og.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Сергей Восканян | AI Automation Architect">
-  <meta name="twitter:description" content="AI-агенты, ETL-пайплайны и no-code автоматизация.">
-  <meta name="twitter:image" content="https://servoskanyan.github.io/assets/og.svg">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #030303;
-      --card-bg: rgba(255, 255, 255, 0.02);
-      --card-hover: rgba(255, 255, 255, 0.05);
-      --border: rgba(255, 255, 255, 0.07);
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
       --accent: #3b82f6;
-      --accent-glow: rgba(59, 130, 246, 0.3);
+      --accent-glow: rgba(59, 130, 246, 0.35);
       --text-main: #ffffff;
       --text-dim: #94a3b8;
       --success: #22c55e;
-      --success-border: rgba(34, 197, 94, 0.3);
+      --success-border: rgba(34, 197, 94, 0.35);
       --warning: #f59e0b;
       --muted: #64748b;
+      --max: 1360px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
     body {
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text-main);
       font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
+      line-height: 1.55;
       background-image:
-        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.05) 0%, transparent 35%),
-        radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.05) 0%, transparent 35%);
-      line-height: 1.6;
+        radial-gradient(circle at 10% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 42%),
+        radial-gradient(circle at 90% 100%, rgba(59, 130, 246, 0.06) 0%, transparent 40%);
     }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-    .center-wrapper { display: flex; justify-content: center; width: 100%; }
+    .container { width: min(var(--max), 100%); margin: 0 auto; padding: 12px 16px 40px; }
 
     .hire-status {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 8px 24px;
-      border-radius: 100px;
-      background: rgba(34, 197, 94, 0.05);
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.08);
       border: 1px solid var(--success-border);
-      margin: 20px auto 32px;
       font-weight: 600;
       color: var(--success);
-      font-size: 0.95rem;
+      font-size: 0.82rem;
     }
-    .hire-status i { width: 18px; height: 18px; }
+    .hire-status i { width: 16px; height: 16px; }
 
-    header { margin-bottom: 48px; text-align: center; animation: fadeIn 0.8s ease; }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-links { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .top-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: 0.2s;
+    }
+    .top-links a:hover { color: #fff; border-color: var(--accent); }
+
+    /* Hero: 2 columns on desktop */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 420px) 1fr;
+      gap: 24px 32px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
 
     h1 {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: clamp(2.2rem, 8vw, 3.8rem);
+      font-size: clamp(1.85rem, 4vw, 3.2rem);
       font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.1;
-      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 8px;
     }
     h1 span { color: var(--accent); }
 
-    .hero-title {
-      color: var(--text-main);
-      font-size: clamp(1rem, 3vw, 1.15rem);
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .hero-desc {
-      color: var(--text-dim);
-      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-      max-width: 680px;
-      margin: 0 auto 28px;
-    }
+    .hero-title { font-weight: 600; font-size: 1rem; margin-bottom: 10px; }
+    .hero-desc { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 16px; max-width: 36ch; }
 
     .metrics-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
     }
 
     .metric-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px 24px;
-      min-width: 140px;
+      border-radius: 12px;
+      padding: 10px 8px;
       text-align: center;
     }
     .metric-card .value {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: var(--accent);
+      line-height: 1.1;
     }
     .metric-card .label {
-      font-size: 0.8rem;
+      font-size: 0.62rem;
       color: var(--text-dim);
       margin-top: 4px;
+      line-height: 1.25;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 0; }
 
     .cta-btn {
-      padding: 14px 28px;
-      border-radius: 14px;
+      padding: 11px 20px;
+      border-radius: 12px;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: 0.3s;
-      font-size: 0.95rem;
+      transition: 0.25s;
+      font-size: 0.88rem;
+      white-space: nowrap;
     }
-    .cta-btn.primary { background: var(--accent); color: #fff; box-shadow: 0 8px 20px var(--accent-glow); }
-    .cta-btn.primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
-    .cta-btn.secondary { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; }
-    .cta-btn.secondary:hover { background: rgba(255,255,255,0.1); }
+    .cta-btn.primary { background: var(--accent); color: #fff; box-shadow: 0 6px 18px var(--accent-glow); }
+    .cta-btn.primary:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .cta-btn.secondary { background: rgba(255,255,255,0.04); border: 1px solid var(--border); color: #fff; }
+    .cta-btn.secondary:hover { background: rgba(255,255,255,0.08); }
 
-    .status-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 16px; }
-    .status-badges img { height: 26px; border-radius: 4px; }
+    /* Featured in hero — uses full width on desktop */
+    .hero-cases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .hero-cases-label {
+      grid-column: 1 / -1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: -4px;
+    }
 
     .section-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.35rem;
-      margin: 48px 0 24px;
+      font-size: 1.2rem;
+      margin: 32px 0 16px;
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    .section-title span { flex-grow: 1; height: 1px; background: var(--border); }
+    .section-title span { flex: 1; height: 1px; background: var(--border); }
 
     .tabs-nav {
       display: flex;
-      gap: 10px;
-      margin-bottom: 24px;
+      gap: 8px;
+      margin-bottom: 16px;
       overflow-x: auto;
-      padding-bottom: 8px;
       scrollbar-width: none;
     }
     .tabs-nav::-webkit-scrollbar { display: none; }
@@ -168,422 +190,292 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       color: var(--text-dim);
-      padding: 10px 18px;
-      border-radius: 12px;
+      padding: 8px 16px;
+      border-radius: 10px;
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      transition: all 0.3s ease;
       white-space: nowrap;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      transition: 0.2s;
     }
-    .tab-btn i { width: 16px; height: 16px; }
-    .tab-btn:hover { background: var(--card-hover); color: var(--text-main); }
-    .tab-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-      box-shadow: 0 4px 15px var(--accent-glow);
-    }
+    .tab-btn i { width: 14px; height: 14px; }
+    .tab-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      transition: opacity 0.3s ease;
-    }
-
-    .projects-grid.featured {
-      grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 8px;
+      gap: 14px;
+      transition: opacity 0.25s ease;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 22px;
-      transition: all 0.35s ease;
+      border-radius: 16px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       height: 100%;
+      transition: 0.3s;
     }
     .card.hidden { display: none; }
-    .card.featured { border-color: rgba(59, 130, 246, 0.25); }
-    .card:hover { border-color: var(--accent); background: var(--card-hover); transform: translateY(-3px); box-shadow: 0 10px 30px -10px var(--accent-glow); }
+    .card:hover { border-color: rgba(59,130,246,0.5); background: var(--card-hover); transform: translateY(-2px); }
 
     .card h3 {
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       color: var(--text-dim);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
-    .card h3 i { width: 14px; height: 14px; color: var(--accent); }
+    .card h3 i { width: 13px; height: 13px; color: var(--accent); }
+    .card .title { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; line-height: 1.25; }
+    .card .desc { font-size: 0.84rem; color: var(--text-dim); line-height: 1.45; margin-bottom: 10px; flex-grow: 1; }
+    .stack-info { font-size: 0.68rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; display: block; }
 
-    .card .title { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
-    .card .desc { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 14px; flex-grow: 1; }
-    .stack-info { font-size: 0.72rem; font-weight: 600; color: var(--accent); margin-bottom: 16px; display: block; }
-
-    .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; gap: 8px; flex-wrap: wrap; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: auto; }
 
     .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.65rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
     }
-    .status-badge.live { background: rgba(34, 197, 94, 0.1); color: var(--success); border: 1px solid rgba(34, 197, 94, 0.25); }
-    .status-badge.private { background: rgba(100, 116, 139, 0.15); color: var(--muted); border: 1px solid rgba(100, 116, 139, 0.3); }
-    .status-badge.archived { background: rgba(245, 158, 11, 0.1); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.25); }
+    .status-badge.live { background: rgba(34,197,94,0.12); color: var(--success); border: 1px solid rgba(34,197,94,0.25); }
+    .status-badge.private { background: rgba(100,116,139,0.15); color: var(--muted); border: 1px solid rgba(100,116,139,0.3); }
+    .status-badge.archived { background: rgba(245,158,11,0.1); color: var(--warning); border: 1px solid rgba(245,158,11,0.25); }
 
-    .repo-link {
-      display: inline-flex;
-      text-decoration: none;
-    }
-    .repo-link img { height: 26px; border-radius: 4px; }
+    .repo-link { display: inline-flex; text-decoration: none; }
+    .repo-link img { height: 24px; border-radius: 4px; }
 
-    .timeline { position: relative; padding-left: 24px; }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 5px;
-      top: 8px;
-      bottom: 8px;
-      width: 1px;
-      background: var(--border);
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card-bg);
+      margin-top: 28px;
     }
-    .timeline-item { position: relative; margin-bottom: 28px; }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-dot {
-      position: absolute;
-      left: -24px;
-      top: 6px;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 2px solid var(--bg);
-    }
-    .timeline-date { font-size: 0.82rem; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
-    .timeline-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
-    .timeline-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.5; }
-    .growth-badge {
-      display: inline-flex;
-      padding: 2px 8px;
-      background: rgba(34, 197, 94, 0.1);
-      color: var(--success);
-      border-radius: 4px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      margin-left: 6px;
-      margin-top: 4px;
-    }
+    .meta-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+    .meta-badges img { height: 24px; border-radius: 4px; }
 
     .exp-box {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
+      border-radius: 16px;
+      padding: 22px;
     }
 
-    .credentials-line {
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.85rem;
-      margin-top: 16px;
+    .timeline { position: relative; padding-left: 20px; }
+    .timeline::before { content: ''; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 1px; background: var(--border); }
+    .timeline-item { position: relative; margin-bottom: 22px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot { position: absolute; left: -20px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+    .timeline-date { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 2px; }
+    .timeline-title { font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
+    .timeline-desc { font-size: 0.84rem; color: var(--text-dim); }
+    .growth-badge {
+      display: inline-flex;
+      padding: 2px 7px;
+      background: rgba(34,197,94,0.1);
+      color: var(--success);
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      margin: 4px 4px 0 0;
     }
 
     .contact-cta {
-      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent), var(--card-bg);
+      background: radial-gradient(circle at top right, rgba(59,130,246,0.12), transparent), var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 48px 32px;
+      border-radius: 20px;
+      padding: 36px 24px;
       text-align: center;
-      margin: 56px 0 40px;
-    }
-    .contact-cta h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
-    .contact-cta p { color: var(--text-dim); margin-bottom: 28px; }
-    .contact-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    footer {
       margin-top: 32px;
-      padding: 32px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.85rem;
+    }
+    .contact-cta h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
+    .contact-cta p { color: var(--text-dim); margin-bottom: 20px; font-size: 0.92rem; }
+    .contact-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+    footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.8rem; }
+    .loading { text-align: center; color: var(--text-dim); padding: 40px 0; }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-cases { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    .loading { text-align: center; color: var(--text-dim); padding: 60px 0; }
-
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-
-    @media (max-width: 900px) {
-      .projects-grid, .projects-grid.featured { grid-template-columns: repeat(2, 1fr); }
-    }
+    /* Mobile */
     @media (max-width: 640px) {
-      .projects-grid, .projects-grid.featured { grid-template-columns: 1fr; }
-      .contact-cta { padding: 36px 20px; }
-      .contact-cta h2 { font-size: 1.6rem; }
+      .container { padding: 10px 12px 32px; }
+      .top-bar { margin-bottom: 14px; }
+      .top-links { width: 100%; }
+      .hero-desc { max-width: none; font-size: 0.86rem; margin-bottom: 12px; }
+      .metrics-row { gap: 6px; }
+      .metric-card { padding: 8px 4px; }
+      .metric-card .value { font-size: 1rem; }
+      .metric-card .label { font-size: 0.58rem; }
+      .hero-cases { display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory; padding-bottom: 4px; scrollbar-width: none; }
+      .hero-cases::-webkit-scrollbar { display: none; }
+      .hero-cases .card { min-width: 82vw; scroll-snap-align: start; flex-shrink: 0; }
+      .hero-cases-label { display: none; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .cta-btn { flex: 1; justify-content: center; min-width: 140px; }
+      .meta-strip { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <div id="app">
-    <p class="loading">Загрузка…</p>
-  </div>
+  <div id="app"><p class="loading">Загрузка…</p></div>
 </div>
 
-<!-- Fallback для локального открытия file:// (fetch к JSON блокируется браузером) -->
 <script id="profile-data" type="application/json">
-{
-  "name": "Сергей Восканян",
-  "nameHighlight": "Восканян",
-  "title": "AI Automation Architect",
-  "tagline": "Проектирую AI-агентов и automation-пайплайны: от ETL до автономных бизнес-систем",
-  "hireStatus": "Open for Hire • Remote • Senior Expert",
-  "metrics": [
-    { "value": "70%", "label": "автоматизации рутины" },
-    { "value": "AI", "label": "агенты & LLM-пайплайны" },
-    { "value": "ETL", "label": "API → PostgreSQL → BI" }
-  ],
-  "badges": [
-    "https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=for-the-badge&logo=yandex&logoColor=white",
-    "https://img.shields.io/badge/Google_Ads_Certified-4285F4?style=for-the-badge&logo=google-ads&logoColor=white",
-    "https://img.shields.io/badge/n8n_Expert-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white"
-  ],
-  "skills": "https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark",
-  "credentials": "Yandex Direct PRO • Google Expert • 1С Prof • МГУПП, Кибернетика",
-  "experience": [
-    {
-      "period": "2023 — наст. время",
-      "title": "AI Marketing & Automation Lead / IT PM",
-      "desc": "AI-агенты, ETL-пайплайны API → PostgreSQL → Looker Studio, кросс-функциональная команда.",
-      "highlights": ["−70% рутины", "SEO +40%"]
-    },
-    {
-      "period": "2014 — 2022",
-      "title": "Lead Product Manager / Digital Strategist",
-      "desc": "Масштабирование 20+ брендов (Parker, Edding, DYMO). SEO, маркетплейсы, автоматизация воронки.",
-      "highlights": ["+25–30% рост", "CPA −20%"]
-    },
-    {
-      "period": "2008 — 2013",
-      "title": "1С Developer → E-commerce Lead",
-      "desc": "Инженерная база: 1С, SQL, e-commerce операционка и автоматизация процессов.",
-      "highlights": ["1С Prof", "+30% заказов"]
-    }
-  ],
-  "contacts": {
-    "telegram": "https://t.me/Serik_V",
-    "email": "mailto:ser@voskanjan.ru",
-    "github": "https://github.com/SerVoskanyan"
-  },
-  "site": {
-    "url": "https://servoskanyan.github.io/",
-    "title": "Сергей Восканян | AI Automation Architect",
-    "description": "AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.",
-    "ogImage": "https://servoskanyan.github.io/assets/og.svg"
-  }
-}
+{"name":"Сергей Восканян","nameHighlight":"Восканян","title":"AI Automation Architect","tagline":"AI-агенты, ETL и no-code автоматизация — снимаю до 70% рутины","hireStatus":"Open for Hire • Remote • Senior","metrics":[{"value":"70%","label":"автоматизации"},{"value":"AI","label":"агенты & LLM"},{"value":"ETL","label":"API→PG→BI"}],"badges":["https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=flat-square&logo=yandex&logoColor=white","https://img.shields.io/badge/Google_Ads-4285F4?style=flat-square&logo=google-ads&logoColor=white","https://img.shields.io/badge/n8n-FF6D5A?style=flat-square&logo=n8n&logoColor=white"],"skills":"https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark","credentials":"Yandex Direct PRO • Google Expert • 1С Prof • МГУПП","experience":[{"period":"2023 — наст. время","title":"AI Automation Lead / IT PM","desc":"AI-агенты, ETL API → PostgreSQL → Looker Studio.","highlights":["−70% рутины","SEO +40%"]},{"period":"2014 — 2022","title":"Lead PM / Digital Strategist","desc":"20+ брендов (Parker, Edding, DYMO). SEO, маркетплейсы.","highlights":["+25–30%","CPA −20%"]},{"period":"2008 — 2013","title":"1С Developer → E-commerce Lead","desc":"1С, SQL, e-commerce, автоматизация процессов.","highlights":["1С Prof","+30% заказов"]}],"contacts":{"telegram":"https://t.me/Serik_V","email":"mailto:ser@voskanjan.ru","github":"https://github.com/SerVoskanyan"},"site":{"url":"https://servoskanyan.github.io/","title":"Сергей Восканян | AI Automation Architect","description":"AI-агенты, ETL-пайплайны и no-code автоматизация.","ogImage":"https://servoskanyan.github.io/assets/og.svg"}}
 </script>
-<script id="projects-data" type="application/json">{"projects":[{"id":"autoshedevrum","featured":true,"category":"ai","type":"AI Automation","icon":"zap","title":"AutoShedevrum: AI Blogger","desc":"Агент ведёт канал в Шедеврум и Telegram: ищет тренды, регенерирует промпты и публикует контент. Управление через TG-бота.","stack":"Python • PocketBase • Docker • Gemini • Telegram API","status":"live","repoUrl":"https://github.com/SerVoskanyan/AutoShedevrum-OpenSource"},{"id":"seo-audit","featured":true,"category":"ai","type":"SEO AI","icon":"search","title":"Auto SEO-Audit Agent","desc":"ИИ-агент анализирует GSC и Яндекс Вебмастер, находит проблемы и пишет рекомендации в Google Sheets.","stack":"n8n • OpenAI • Google Sheets • GSC API","status":"live","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent"},{"id":"linkedin-jobs","featured":true,"category":"ai","type":"No-Code Automation","icon":"briefcase","title":"LinkedIn Jobs Monitor","desc":"Авто-выгрузка вакансий LinkedIn → Apify → Google Sheets с фильтрацией по ключам. Workflow в репо, live-сервер снят.","stack":"n8n • Apify • LinkedIn Jobs • Google Sheets","status":"archived","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor"},{"id":"content-intelligence","featured":false,"category":"ai","type":"Content Analysis","icon":"file-text","title":"AI Content Intelligence","desc":"n8n-шаблон: HTML → Markdown → GPT-4 отчёт по контенту сайта.","stack":"n8n • GPT-4 • HTTP Request • Google Sheets","status":"archived"},{"id":"order-system","featured":false,"category":"ai","type":"Lead Capture","icon":"form-input","title":"No-Code Order System","desc":"Мост для статических сайтов: Webhook → Google Sheets + Telegram-уведомления.","stack":"n8n • Webhook • Google Sheets • Telegram","status":"archived"},{"id":"jivo-bridge","featured":false,"category":"ai","type":"Chat Automation","icon":"message-square","title":"Jivo Intelligence Bridge","desc":"Интеграция JivoSite: проброс диалогов в Google Sheets и Telegram.","stack":"n8n • JivoSite • Google Sheets • Telegram API","status":"archived"},{"id":"email-processor","featured":false,"category":"ai","type":"Email Automation","icon":"mail","title":"Intelligent Email Processor","desc":"Авто-обработка IMAP: очистка от мусора и форматирование заявок в CRM.","stack":"n8n • IMAP • JS Code • Google Sheets • Telegram","status":"archived"},{"id":"rss-hub","featured":false,"category":"ai","type":"Content Distribution","icon":"rss","title":"RSS Omni-Channel Hub","desc":"Мониторинг RSS-каналов с авто-трансляцией в Telegram.","stack":"Make.com • Telegram API • RSS Feed","status":"archived"},{"id":"dialog-logger","featured":false,"category":"ai","type":"Conversational AI","icon":"bot","title":"AI Dialog Logger (Gemini)","desc":"Telegram-ассистент с памятью: логирует диалоги и отвечает через Gemini.","stack":"n8n • Google Sheets • Gemini API • Telegram API","status":"private"},{"id":"legacy-transformation","featured":false,"category":"ai","type":"Engineering","icon":"refresh-cw","title":"Legacy Transformation","desc":"Перевод систем с 1С на современные стеки. Автоматизация отчётности и BI.","stack":"1C:Enterprise • SQL • Python","status":"private"}]}</script>
+<script id="projects-data" type="application/json">{"projects":[{"id":"autoshedevrum","featured":true,"category":"ai","type":"AI Automation","icon":"zap","title":"AutoShedevrum: AI Blogger","desc":"Агент ведёт канал в Шедеврум и Telegram. Управление через TG-бота.","stack":"Python • PocketBase • Gemini • Telegram","status":"live","repoUrl":"https://github.com/SerVoskanyan/AutoShedevrum-OpenSource"},{"id":"seo-audit","featured":true,"category":"ai","type":"SEO AI","icon":"search","title":"Auto SEO-Audit Agent","desc":"GSC + Яндекс Вебмастер → рекомендации в Google Sheets.","stack":"n8n • OpenAI • GSC API","status":"live","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent"},{"id":"linkedin-jobs","featured":true,"category":"ai","type":"No-Code","icon":"briefcase","title":"LinkedIn Jobs Monitor","desc":"LinkedIn → Apify → Sheets. Workflow в репо.","stack":"n8n • Apify • Sheets","status":"archived","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor"},{"id":"content-intelligence","featured":false,"category":"ai","type":"Content Analysis","icon":"file-text","title":"AI Content Intelligence","desc":"HTML → Markdown → GPT-4 отчёт.","stack":"n8n • GPT-4 • Sheets","status":"archived"},{"id":"order-system","featured":false,"category":"ai","type":"Lead Capture","icon":"form-input","title":"No-Code Order System","desc":"Webhook → Sheets + Telegram.","stack":"n8n • Webhook • Telegram","status":"archived"},{"id":"jivo-bridge","featured":false,"category":"ai","type":"Chat Automation","icon":"message-square","title":"Jivo Intelligence Bridge","desc":"JivoSite → Sheets + Telegram.","stack":"n8n • JivoSite • Telegram","status":"archived"},{"id":"email-processor","featured":false,"category":"ai","type":"Email Automation","icon":"mail","title":"Intelligent Email Processor","desc":"IMAP → очистка → CRM.","stack":"n8n • IMAP • Telegram","status":"archived"},{"id":"rss-hub","featured":false,"category":"ai","type":"Content Distribution","icon":"rss","title":"RSS Omni-Channel Hub","desc":"RSS → Telegram.","stack":"Make.com • RSS","status":"archived"},{"id":"dialog-logger","featured":false,"category":"ai","type":"Conversational AI","icon":"bot","title":"AI Dialog Logger","desc":"TG-ассистент с памятью, Gemini.","stack":"n8n • Gemini • Telegram","status":"private"},{"id":"legacy-transformation","featured":false,"category":"ai","type":"Engineering","icon":"refresh-cw","title":"Legacy Transformation","desc":"1С → современные стеки, BI.","stack":"1C • SQL • Python","status":"private"}]}</script>
 
 <script>
-  const STATUS_LABELS = {
-    live: 'Live',
-    private: 'Private • demo on interview',
-    archived: 'Archived'
-  };
+  const STATUS_LABELS = { live: 'Live', private: 'Private', archived: 'Archived' };
 
-  function renderStatusBadge(status) {
-    const label = STATUS_LABELS[status] || status;
-    return `<span class="status-badge ${status}">${label}</span>`;
+  function renderStatusBadge(s) {
+    return `<span class="status-badge ${s}">${STATUS_LABELS[s] || s}</span>`;
   }
 
-  function renderRepoLink(project) {
-    if (project.repoUrl) {
-      return `<a href="${project.repoUrl}" target="_blank" rel="noopener" class="repo-link">
-        <img src="https://img.shields.io/badge/VIEW_REPO-181717?style=for-the-badge&logo=github" alt="View repo" />
-      </a>`;
-    }
-    return '';
+  function renderRepoLink(p) {
+    return p.repoUrl ? `<a href="${p.repoUrl}" target="_blank" rel="noopener" class="repo-link"><img src="https://img.shields.io/badge/REPO-181717?style=flat-square&logo=github" alt="repo" /></a>` : '';
   }
 
-  function renderCard(project, featured = false) {
-    return `
-      <article class="card${featured ? ' featured' : ''}" data-category="${project.category}" data-id="${project.id}">
-        <div>
-          <h3><i data-lucide="${project.icon}"></i> ${project.type}</h3>
-          <div class="title">${project.title}</div>
-          <div class="desc">${project.desc}</div>
-          <span class="stack-info">${project.stack}</span>
-        </div>
-        <div class="card-footer">
-          ${renderStatusBadge(project.status)}
-          ${renderRepoLink(project)}
-        </div>
-      </article>
-    `;
+  function renderCard(p) {
+    return `<article class="card" data-category="${p.category}" data-id="${p.id}">
+      <div><h3><i data-lucide="${p.icon}"></i> ${p.type}</h3>
+      <div class="title">${p.title}</div><div class="desc">${p.desc}</div>
+      <span class="stack-info">${p.stack}</span></div>
+      <div class="card-footer">${renderStatusBadge(p.status)}${renderRepoLink(p)}</div>
+    </article>`;
   }
 
   function renderExperience(items) {
-    return items.map((item, i) => `
-      <div class="timeline-item">
-        <div class="timeline-dot" style="${i > 0 ? 'background: var(--text-dim);' : ''}"></div>
-        <div class="timeline-date" style="${i > 0 ? 'color: var(--text-dim);' : ''}">${item.period}</div>
-        <div class="timeline-title">${item.title}</div>
-        <div class="timeline-desc">
-          ${item.desc}
-          ${(item.highlights || []).map(h => `<span class="growth-badge">${h}</span>`).join('')}
-        </div>
-      </div>
-    `).join('');
+    return items.map((item, i) => `<div class="timeline-item">
+      <div class="timeline-dot" style="${i ? 'background:var(--text-dim)' : ''}"></div>
+      <div class="timeline-date" style="${i ? 'color:var(--text-dim)' : ''}">${item.period}</div>
+      <div class="timeline-title">${item.title}</div>
+      <div class="timeline-desc">${item.desc}${(item.highlights||[]).map(h=>`<span class="growth-badge">${h}</span>`).join('')}</div>
+    </div>`).join('');
   }
 
   function renderPage(profile, projects) {
     const featured = projects.filter(p => p.featured);
-    const all = projects;
-
     document.title = profile.site.title;
-    document.querySelector('meta[name="description"]').content = profile.site.description;
-    document.querySelector('meta[property="og:title"]').content = profile.site.title;
-    document.querySelector('meta[property="og:description"]').content = profile.site.description;
 
-    const app = document.getElementById('app');
-    app.innerHTML = `
-      <div class="center-wrapper">
+    document.getElementById('app').innerHTML = `
+      <div class="top-bar">
         <div class="hire-status"><i data-lucide="check-circle-2"></i> ${profile.hireStatus}</div>
+        <div class="top-links">
+          <a href="${profile.contacts.telegram}" target="_blank" rel="noopener">Telegram</a>
+          <a href="${profile.contacts.email}">Email</a>
+          <a href="${profile.contacts.github}" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
 
-      <header>
-        <h1>Сергей <span>${profile.nameHighlight}</span></h1>
-        <p class="hero-title">${profile.title}</p>
-        <p class="hero-desc">${profile.tagline}</p>
-
-        <div class="metrics-row">
-          ${profile.metrics.map(m => `
-            <div class="metric-card">
-              <div class="value">${m.value}</div>
-              <div class="label">${m.label}</div>
-            </div>
-          `).join('')}
+      <section class="hero-grid">
+        <div class="hero-left">
+          <h1>Сергей <span>${profile.nameHighlight}</span></h1>
+          <p class="hero-title">${profile.title}</p>
+          <p class="hero-desc">${profile.tagline}</p>
+          <div class="metrics-row">${profile.metrics.map(m=>`<div class="metric-card"><div class="value">${m.value}</div><div class="label">${m.label}</div></div>`).join('')}</div>
+          <div class="hero-actions">
+            <a href="#cases" class="cta-btn primary"><i data-lucide="folder-open"></i> Все кейсы</a>
+            <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="send"></i> Написать</a>
+          </div>
         </div>
-
-        <div class="hero-actions">
-          <a href="#cases" class="cta-btn primary"><i data-lucide="folder-open"></i> Смотреть кейсы</a>
-          <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="send"></i> Telegram</a>
+        <div class="hero-cases" id="hero-cases">
+          <div class="hero-cases-label">Featured Cases</div>
+          ${featured.map(p => renderCard(p)).join('')}
         </div>
+      </section>
 
-        <div class="status-badges">
-          ${profile.badges.map(b => `<img src="${b}" alt="" />`).join('')}
-        </div>
-        <div style="display:flex;justify-content:center;margin-top:12px;">
-          <img src="${profile.skills}" alt="Skills" />
-        </div>
-      </header>
-
-      <div class="section-title"><span></span> Featured Cases <span></span></div>
-      <div class="projects-grid featured" id="featured-grid">
-        ${featured.map(p => renderCard(p, true)).join('')}
-      </div>
-
-      <div class="section-title" id="cases"><span></span> Все кейсы <span></span></div>
+      <div class="section-title" id="cases"><span></span> Все проекты <span></span></div>
       <div class="tabs-nav">
         <button class="tab-btn active" data-filter="all"><i data-lucide="layout-grid"></i> Все</button>
         <button class="tab-btn" data-filter="ai"><i data-lucide="zap"></i> AI & Automation</button>
       </div>
-      <div class="projects-grid" id="projects-grid">
-        ${all.map(p => renderCard(p)).join('')}
+      <div class="projects-grid" id="projects-grid">${projects.map(p=>renderCard(p)).join('')}</div>
+
+      <div class="meta-strip">
+        <div class="meta-badges">${profile.badges.map(b=>`<img src="${b}" alt="" />`).join('')}</div>
+        <img src="${profile.skills}" alt="Skills" />
       </div>
 
       <div class="section-title"><span></span> Опыт <span></span></div>
-      <div class="exp-box">
-        <div class="timeline">${renderExperience(profile.experience)}</div>
-      </div>
-      <p class="credentials-line">${profile.credentials}</p>
+      <div class="exp-box"><div class="timeline">${renderExperience(profile.experience)}</div></div>
+      <p style="text-align:center;color:var(--text-dim);font-size:0.82rem;margin-top:12px;">${profile.credentials}</p>
 
       <div class="contact-cta">
-        <h2>Давайте автоматизируем ваш процесс</h2>
-        <p>Ищете архитектора для AI-агентов или automation-пайплайнов? Я на связи.</p>
+        <h2>Давайте автоматизируем процесс</h2>
+        <p>AI-агенты, ETL, n8n — обсудим ваш кейс.</p>
         <div class="contact-buttons">
           <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn primary"><i data-lucide="send"></i> Telegram</a>
           <a href="${profile.contacts.email}" class="cta-btn secondary"><i data-lucide="mail"></i> Email</a>
           <a href="${profile.contacts.github}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="github"></i> GitHub</a>
         </div>
       </div>
-
-      <footer>
-        <p>© 2026 ${profile.name} • ${profile.title}</p>
-      </footer>
+      <footer><p>© 2026 ${profile.name} • ${profile.title}</p></footer>
     `;
-
     lucide.createIcons();
     initFilters();
   }
 
   function initFilters() {
-    const filterButtons = document.querySelectorAll('.tab-btn');
-    const projectCards = document.querySelectorAll('#projects-grid .card');
-    const grid = document.getElementById('projects-grid');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const filterValue = button.getAttribute('data-filter');
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        const grid = document.getElementById('projects-grid');
         grid.style.opacity = '0';
         setTimeout(() => {
-          projectCards.forEach(card => {
-            const category = card.getAttribute('data-category');
-            if (filterValue === 'all' || category === filterValue) {
-              card.classList.remove('hidden');
-            } else {
-              card.classList.add('hidden');
-            }
+          grid.querySelectorAll('.card').forEach(c => {
+            c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f);
           });
           grid.style.opacity = '1';
-        }, 200);
+        }, 150);
       });
     });
   }
 
-  async function loadJson(url, fallbackId) {
+  async function loadJson(url, id) {
     try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
+      const r = await fetch(url);
+      if (!r.ok) throw 0;
+      return await r.json();
     } catch {
-      const el = document.getElementById(fallbackId);
-      if (el) return JSON.parse(el.textContent);
-      throw new Error(`No data for ${url}`);
+      return JSON.parse(document.getElementById(id).textContent);
     }
   }
 
   async function init() {
     try {
       const profile = await loadJson('./data/profile.json', 'profile-data');
-      const projectsData = await loadJson('./data/projects.json', 'projects-data');
-      const projects = projectsData.projects || projectsData;
+      const { projects } = await loadJson('./data/projects.json', 'projects-data');
       renderPage(profile, projects);
-    } catch (err) {
-      document.getElementById('app').innerHTML = '<p class="loading">Не удалось загрузить данные. Запустите: <code>./serve.sh</code></p>';
-      console.error(err);
+    } catch (e) {
+      document.getElementById('app').innerHTML = '<p class="loading">Ошибка загрузки. Запустите <code>./serve.sh</code></p>';
     }
   }
-
   init();
 </script>
 </body>
