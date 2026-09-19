@@ -1,12 +1,5 @@
-# Portfolio v2 — AI Automation Architect
+# Сергей Восканян — Portfolio
 
-Лендинг: **https://servoskanyan.github.io/**
+**https://servoskanyan.github.io/**
 
-## Локальный просмотр
-
-```bash
-./serve.sh
-# открыть http://localhost:8080
-```
-
-Или двойной клик по `index.html` — данные подгружаются из встроенного fallback.
+AI Automation Architect · кейсы, опыт, контакты.
