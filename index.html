@@ -1,288 +1,554 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сергей Восканян | AI Automation Architect</title>
-  <meta name="description" content="AI-агенты, ETL-пайплайны и no-code автоматизация.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://servoskanyan.github.io/">
-  <meta property="og:title" content="Сергей Восканян | AI Automation Architect">
-  <meta property="og:description" content="AI-агенты, ETL-пайплайны и no-code автоматизация.">
-  <meta property="og:image" content="https://servoskanyan.github.io/assets/og.svg">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #030303;
-      --card-bg: rgba(255,255,255,0.03);
-      --card-hover: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.08);
-      --accent: #3b82f6;
-      --accent-glow: rgba(59,130,246,0.35);
-      --text-main: #fff;
-      --text-dim: #94a3b8;
-      --success: #22c55e;
-      --success-border: rgba(34,197,94,0.35);
-      --warning: #f59e0b;
-      --muted: #64748b;
-      --max: 1280px;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
-    body {
-      font-family:'Inter',sans-serif; color:var(--text-main); background:var(--bg); line-height:1.55;
-      background-image:
-        radial-gradient(circle at 15% 10%, rgba(59,130,246,0.07) 0%, transparent 40%),
-        radial-gradient(circle at 85% 90%, rgba(59,130,246,0.05) 0%, transparent 38%);
-    }
-    .container { width:min(var(--max),100%); margin:0 auto; padding:16px 20px 48px; }
-    .center-wrapper { display:flex; justify-content:center; width:100%; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сергей Восканян | AI Automation Architect & Technical PM</title>
+    <meta name="description" content="AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://servoskanyan.github.io/">
+    <meta property="og:title" content="Сергей Восканян | AI Automation Architect">
+    <meta property="og:description" content="AI-агенты, ETL-пайплайны и no-code автоматизация. Кейсы, опыт и контакты.">
+    <meta property="og:image" content="https://servoskanyan.github.io/assets/og.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --card-hover: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.07);
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.3);
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --success: #22c55e;
+            --success-border: rgba(34, 197, 10, 0.3);
+            --warning: #f59e0b;
+            --muted: #64748b;
+            --youtube: #FF0000;
+            --telegram: #0088cc;
+        }
 
-    .hire-status {
-      display:inline-flex; align-items:center; gap:8px; padding:7px 20px; border-radius:999px;
-      background:rgba(34,197,94,0.08); border:1px solid var(--success-border);
-      color:var(--success); font-weight:600; font-size:0.88rem; margin-bottom:28px;
-    }
-    .hire-status i { width:16px; height:16px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
-    header { text-align:center; margin-bottom:36px; animation:fadeIn .8s ease; }
-    h1 {
-      font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2rem,6vw,3.6rem);
-      font-weight:800; letter-spacing:-0.04em; line-height:1.08; margin-bottom:16px;
-    }
-    h1 span { color:var(--accent); }
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.05) 0%, transparent 35%),
+                radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.05) 0%, transparent 35%);
+            line-height: 1.6;
+        }
 
-    .status-badges { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-bottom:20px; }
-    .status-badges img { height:26px; border-radius:4px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-    .hero-desc {
-      color:var(--text-dim); font-size:clamp(0.92rem,2.5vw,1.1rem);
-      max-width:720px; margin:0 auto 20px; line-height:1.6;
-    }
-    .hero-desc b { color:var(--text-main); display:block; margin-bottom:6px; font-size:1.05em; }
+        .hire-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 24px;
+            border-radius: 100px;
+            background: rgba(34, 197, 94, 0.05);
+            border: 1px solid var(--success-border);
+            margin: 20px auto 32px;
+            font-weight: 600;
+            color: var(--success);
+            font-size: 0.95rem;
+        }
+        .hire-status i { width: 18px; height: 18px; }
+        .center-wrapper { display: flex; justify-content: center; width: 100%; }
 
-    .skills-row { display:flex; justify-content:center; margin-bottom:24px; }
+        .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            margin: 60px 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-main);
+        }
+        .section-title span { flex-grow: 1; height: 1px; background: var(--border); }
 
-    .metrics-row {
-      display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
-      max-width:560px; margin:0 auto 20px;
-    }
-    .metric-card {
-      background:var(--card-bg); border:1px solid var(--border); border-radius:14px;
-      padding:12px 10px; text-align:center;
-    }
-    .metric-card .value { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.25rem; font-weight:800; color:var(--accent); }
-    .metric-card .label { font-size:0.68rem; color:var(--text-dim); margin-top:4px; line-height:1.25; }
+        .tabs-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: none;
+        }
+        .tabs-nav::-webkit-scrollbar { display: none; }
 
-    .hero-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
-    .cta-btn {
-      padding:12px 24px; border-radius:14px; font-weight:700; text-decoration:none;
-      display:inline-flex; align-items:center; gap:8px; font-size:0.9rem; transition:.25s;
-    }
-    .cta-btn.primary { background:var(--accent); color:#fff; box-shadow:0 8px 20px var(--accent-glow); }
-    .cta-btn.primary:hover { transform:translateY(-2px); filter:brightness(1.08); }
-    .cta-btn.secondary { background:rgba(255,255,255,0.05); border:1px solid var(--border); color:#fff; }
-    .cta-btn.secondary:hover { background:rgba(255,255,255,0.09); }
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tab-btn i { width: 16px; height: 16px; }
+        .tab-btn:hover { background: var(--card-hover); color: var(--text-main); }
+        .tab-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
 
-    .section-title {
-      font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem;
-      margin:40px 0 20px; display:flex; align-items:center; gap:12px;
-    }
-    .section-title span { flex:1; height:1px; background:var(--border); }
+        header { margin-bottom: 48px; text-align: center; animation: fadeIn 1s ease; }
 
-    .tabs-nav { display:flex; gap:8px; margin-bottom:18px; overflow-x:auto; scrollbar-width:none; }
-    .tabs-nav::-webkit-scrollbar { display:none; }
-    .tab-btn {
-      background:var(--card-bg); border:1px solid var(--border); color:var(--text-dim);
-      padding:9px 16px; border-radius:10px; cursor:pointer; font-size:0.82rem; font-weight:600;
-      white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:.2s;
-    }
-    .tab-btn i { width:14px; height:14px; }
-    .tab-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+        h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.2rem, 8vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        h1 span { color: var(--accent); }
+        .hero-desc { color: var(--text-dim); font-size: clamp(1rem, 3vw, 1.2rem); max-width: 800px; margin: 0 auto; }
+        .hero-desc b { color: var(--text-main); }
 
-    .projects-grid {
-      display:grid; grid-template-columns:repeat(3,1fr); gap:16px; transition:opacity .25s;
-    }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            transition: opacity 0.3s ease;
+        }
 
-    .card {
-      background:var(--card-bg); border:1px solid var(--border); border-radius:20px;
-      padding:20px; display:flex; flex-direction:column; height:100%; transition:.35s;
-    }
-    .card.hidden { display:none; }
-    .card.featured { border-color:rgba(59,130,246,0.35); background:rgba(59,130,246,0.04); }
-    .card:hover { border-color:var(--accent); background:var(--card-hover); transform:translateY(-3px); box-shadow:0 12px 32px -12px var(--accent-glow); }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: inherit;
+            height: 100%;
+        }
+        .card.hidden { display: none; }
+        .card:hover { border-color: var(--accent); background: var(--card-hover); transform: translateY(-4px); box-shadow: 0 10px 30px -10px var(--accent-glow); }
 
-    .card h3 { font-size:0.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--text-dim); margin-bottom:10px; display:flex; align-items:center; gap:6px; }
-    .card h3 i { width:13px; height:13px; color:var(--accent); }
-    .card .title { font-size:1.12rem; font-weight:700; margin-bottom:8px; line-height:1.3; }
-    .card .desc { font-size:0.88rem; color:var(--text-dim); line-height:1.5; margin-bottom:12px; flex-grow:1; }
-    .stack-info { font-size:0.72rem; font-weight:600; color:var(--accent); margin-bottom:14px; display:block; }
-    .card-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; margin-top:auto; }
+        .card h3 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .card h3 i { width: 14px; height: 14px; color: var(--accent); }
+        .card .title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3; color: #fff; }
+        .card .desc { font-size: 0.95rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+        .stack-info { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 20px; display: block; }
 
-    .status-badge { padding:4px 10px; border-radius:6px; font-size:0.65rem; font-weight:700; text-transform:uppercase; }
-    .status-badge.live { background:rgba(34,197,94,0.12); color:var(--success); border:1px solid rgba(34,197,94,0.25); }
-    .status-badge.private { background:rgba(100,116,139,0.15); color:var(--muted); border:1px solid rgba(100,116,139,0.3); }
-    .status-badge.archived { background:rgba(245,158,11,0.1); color:var(--warning); border:1px solid rgba(245,158,11,0.25); }
-    .repo-link { display:inline-flex; text-decoration:none; }
-    .repo-link img { height:24px; border-radius:4px; }
+        .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+        .badge-btn { display: inline-flex; }
+        .badge-btn img { height: 26px; border-radius: 4px; }
 
-    .experience-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:16px; }
-    .exp-box { background:var(--card-bg); border:1px solid var(--border); border-radius:20px; padding:24px; }
-    .exp-header { display:flex; align-items:center; gap:8px; color:var(--text-dim); font-size:0.75rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:18px; }
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .status-badge.live { background: rgba(34,197,94,0.12); color: var(--success); border: 1px solid rgba(34,197,94,0.25); }
+        .status-badge.archived { background: rgba(245,158,11,0.1); color: var(--warning); border: 1px solid rgba(245,158,11,0.25); }
+        .status-badge.private { background: rgba(100,116,139,0.15); color: var(--muted); border: 1px solid rgba(100,116,139,0.3); }
 
-    .timeline { position:relative; padding-left:20px; }
-    .timeline::before { content:''; position:absolute; left:4px; top:6px; bottom:6px; width:1px; background:var(--border); }
-    .timeline-item { position:relative; margin-bottom:24px; }
-    .timeline-item:last-child { margin-bottom:0; }
-    .timeline-dot { position:absolute; left:-20px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); }
-    .timeline-date { font-size:0.78rem; font-weight:600; color:var(--accent); margin-bottom:2px; }
-    .timeline-title { font-size:1rem; font-weight:700; margin-bottom:4px; }
-    .timeline-desc { font-size:0.85rem; color:var(--text-dim); }
-    .growth-badge { display:inline-flex; padding:2px 7px; background:rgba(34,197,94,0.1); color:var(--success); border-radius:4px; font-size:0.68rem; font-weight:700; margin:4px 4px 0 0; }
+        .experience-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; margin-bottom: 40px; }
+        .exp-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 32px; position: relative; }
+        .exp-header {
+            display: flex; align-items: center; gap: 10px; color: var(--text-dim);
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px;
+        }
 
-    .tags-container { display:flex; flex-wrap:wrap; gap:8px; }
-    .tag-item {
-      display:flex; align-items:center; gap:6px; padding:8px 12px;
-      background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; font-size:0.8rem;
-    }
-    .tag-item i { width:14px; color:var(--accent); }
+        .timeline { position: relative; padding-left: 24px; }
+        .timeline::before { content: ''; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 1px; background: var(--border); }
+        .timeline-item { position: relative; margin-bottom: 32px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot { position: absolute; left: -24px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); z-index: 2; }
+        .timeline-date { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+        .timeline-title { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .timeline-desc { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
+        .growth-badge { display: inline-flex; padding: 2px 8px; background: rgba(34, 197, 94, 0.1); color: var(--success); border-radius: 4px; font-size: 0.75rem; font-weight: 700; margin-left: 8px; }
 
-    .contact-cta {
-      background:radial-gradient(circle at top right,rgba(59,130,246,0.12),transparent),var(--card-bg);
-      border:1px solid var(--border); border-radius:24px; padding:40px 28px; text-align:center; margin-top:40px;
-    }
-    .contact-cta h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.75rem; font-weight:800; margin-bottom:10px; }
-    .contact-cta p { color:var(--text-dim); margin-bottom:22px; }
-    .contact-buttons { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+        .tags-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag-item {
+            display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; font-size: 0.85rem; color: #fff;
+        }
+        .tag-item:hover { background: var(--card-hover); border-color: var(--text-dim); }
+        .tag-item i { color: var(--accent); width: 16px; }
 
-    footer { margin-top:32px; padding-top:20px; border-top:1px solid var(--border); text-align:center; color:var(--text-dim); font-size:0.82rem; }
-    .loading { text-align:center; color:var(--text-dim); padding:40px 0; }
-    @keyframes fadeIn { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+        .cert-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .cert-badges img { height: 26px; border-radius: 4px; }
 
-    @media (max-width:1024px) {
-      .projects-grid { grid-template-columns:repeat(2,1fr); }
-      .experience-grid { grid-template-columns:1fr; }
-    }
-    @media (max-width:640px) {
-      .container { padding:12px 14px 36px; }
-      .hire-status { margin-bottom:18px; font-size:0.8rem; padding:6px 14px; }
-      header { margin-bottom:24px; }
-      .hero-desc { margin-bottom:14px; }
-      .metrics-row { gap:6px; max-width:100%; }
-      .metric-card { padding:8px 4px; }
-      .metric-card .value { font-size:1.05rem; }
-      .metric-card .label { font-size:0.58rem; }
-      .projects-grid { grid-template-columns:1fr; }
-      .cta-btn { flex:1; justify-content:center; min-width:130px; }
-      .section-title { margin:28px 0 16px; }
-    }
-  </style>
+        .eco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .eco-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+            border: 1px solid var(--border); border-radius: 20px; padding: 20px;
+            display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; transition: 0.3s;
+        }
+        .eco-card:hover { border-color: var(--text-dim); transform: scale(1.02); background: rgba(255,255,255,0.05); }
+        .eco-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .eco-info h4 { font-size: 1rem; font-weight: 700; color: #fff; }
+        .eco-info p { font-size: 0.8rem; color: var(--text-dim); }
+
+        .contact-cta {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent), var(--card-bg);
+            border: 1px solid var(--border); border-radius: 32px; padding: 60px 40px; text-align: center; margin: 80px 0;
+        }
+        .contact-cta h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
+        .contact-cta p { color: var(--text-dim); margin-bottom: 40px; font-size: 1.1rem; }
+        .contact-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+        .cta-btn {
+            padding: 16px 32px; border-radius: 16px; font-weight: 700; text-decoration: none;
+            display: flex; align-items: center; gap: 10px; transition: 0.3s;
+        }
+        .cta-btn.primary { background: var(--accent); color: #fff; box-shadow: 0 10px 20px var(--accent-glow); }
+        .cta-btn.primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .cta-btn.secondary { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; }
+        .cta-btn.secondary:hover { background: rgba(255,255,255,0.1); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 1100px) { .bento-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 1024px) { .experience-container { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .hire-status { font-size: 0.85rem; padding: 6px 16px; margin-bottom: 24px; }
+            header { margin-bottom: 32px; }
+            .card { padding: 24px; }
+            .contact-cta { padding: 40px 20px; }
+            .contact-cta h2 { font-size: 1.8rem; }
+            .section-title { margin: 40px 0 20px; }
+        }
+
+        footer { margin-top: 50px; padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; margin-top: 20px; }
+        .footer-links a { color: var(--text-dim); transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent); }
+    </style>
 </head>
 <body>
-<div class="container"><div id="app"><p class="loading">Загрузка…</p></div></div>
 
-<script id="profile-data" type="application/json">
-{"name":"Сергей Восканян","nameHighlight":"Восканян","title":"AI Automation Architect & Technical PM","tagline":"Архитектор умных систем: от ETL-пайплайнов до AI-агентов. Соединяю инженерный подход и 15 лет в digital, чтобы превращать хаос в автономный бизнес-инструмент.","hireStatus":"Open for Hire • Remote • Senior Expert","metrics":[{"value":"70%","label":"автоматизации рутины"},{"value":"AI","label":"агенты & LLM"},{"value":"ETL","label":"API → PostgreSQL → BI"}],"badges":["https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=for-the-badge&logo=yandex&logoColor=white","https://img.shields.io/badge/Google_Ads_Certified-4285F4?style=for-the-badge&logo=google-ads&logoColor=white","https://img.shields.io/badge/n8n_Expert-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white"],"skills":"https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark","credentials":["МГУПП: Кибернетика","Яндекс.Директ PRO","Google Expert","1С:Предприятие 8.1"],"experience":[{"period":"2023 — наст. время","title":"AI Marketing & Automation Lead / IT PM","desc":"AI-агенты, ETL API → PostgreSQL → Looker Studio.","highlights":["−70% рутины","SEO +40%"]},{"period":"2014 — 2022","title":"Lead Product Manager / Digital Strategist","desc":"20+ брендов (Parker, Edding, DYMO). SEO, маркетплейсы.","highlights":["+25–30%","CPA −20%"]},{"period":"2008 — 2013","title":"1С Developer → E-commerce Lead","desc":"1С, SQL, e-commerce, автоматизация процессов.","highlights":["1С Prof","+30% заказов"]}],"contacts":{"telegram":"https://t.me/Serik_V","email":"mailto:ser@voskanjan.ru","github":"https://github.com/SerVoskanyan"},"site":{"title":"Сергей Восканян | AI Automation Architect","description":"AI-агенты, ETL-пайплайны и no-code автоматизация."}}
-</script>
-<script id="projects-data" type="application/json">{"projects":[{"id":"autoshedevrum","featured":true,"category":"ai","type":"AI Automation","icon":"zap","title":"AutoShedevrum: AI Blogger","desc":"Агент ведёт канал в Шедеврум и Telegram. Автоматически ищет тренды, регенерирует промпты и публикует контент. Управление через TG-бота.","stack":"Python • PocketBase • Docker • Gemini • Telegram API","status":"live","repoUrl":"https://github.com/SerVoskanyan/AutoShedevrum-OpenSource"},{"id":"seo-audit","featured":true,"category":"ai","type":"SEO AI","icon":"search","title":"Auto SEO-Audit Agent","desc":"ИИ-агент анализирует GSC и Яндекс Вебмастер, находит проблемы и пишет рекомендации в Google Sheets.","stack":"n8n • OpenAI • Google Sheets • GSC API","status":"live","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent"},{"id":"linkedin-jobs","featured":true,"category":"ai","type":"No-Code Solution","icon":"briefcase","title":"LinkedIn Jobs Monitor","desc":"Авто-выгрузка вакансий LinkedIn → Apify → Google Sheets. Workflow в репо, live-сервер снят.","stack":"n8n • Apify • LinkedIn Jobs • Google Sheets","status":"archived","repoUrl":"https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor"},{"id":"content-intelligence","featured":false,"category":"ai","type":"Content Analysis","icon":"file-text","title":"AI Content Intelligence","desc":"n8n-шаблон: HTML → Markdown → GPT-4 отчёт по контенту сайта.","stack":"n8n • GPT-4 • HTTP Request • Google Sheets","status":"archived"},{"id":"order-system","featured":false,"category":"ai","type":"Lead Capture","icon":"form-input","title":"No-Code Order System","desc":"Мост для статических сайтов: Webhook → Google Sheets + TG уведомления.","stack":"n8n • Webhook • Google Sheets • Telegram","status":"archived"},{"id":"jivo-bridge","featured":false,"category":"ai","type":"Chat Automation","icon":"message-square","title":"Jivo Intelligence Bridge","desc":"Интеграция JivoSite: проброс диалогов в Google Sheets и Telegram.","stack":"n8n • JivoSite • Google Sheets • Telegram API","status":"archived"},{"id":"email-processor","featured":false,"category":"ai","type":"Email Automation","icon":"mail","title":"Intelligent Email Processor","desc":"Авто-обработка IMAP: очистка от мусора и форматирование заявок в CRM.","stack":"n8n • IMAP • JS Code • Google Sheets • Telegram","status":"archived"},{"id":"rss-hub","featured":false,"category":"ai","type":"Content Distribution","icon":"rss","title":"RSS Omni-Channel Hub","desc":"Мониторинг RSS-каналов с авто-трансляцией в Telegram.","stack":"Make.com • Telegram API • RSS Feed","status":"archived"},{"id":"dialog-logger","featured":false,"category":"ai","type":"Conversational AI","icon":"bot","title":"AI Dialog Logger (Gemini)","desc":"Telegram-ассистент с памятью: логирует диалоги и отвечает через Gemini.","stack":"n8n • Google Sheets • Gemini API • Telegram API","status":"private"},{"id":"legacy-transformation","featured":false,"category":"ai","type":"Engineering","icon":"refresh-cw","title":"Legacy Transformation","desc":"Перевод систем с 1С на современные стеки. Автоматизация отчётности и BI.","stack":"1C:Enterprise • SQL • Python","status":"private"}]}</script>
-
-<script>
-  const STATUS = { live:'Live', private:'Private', archived:'Archived' };
-
-  const renderCard = p => `<article class="card${p.featured?' featured':''}" data-category="${p.category}">
-    <div><h3><i data-lucide="${p.icon}"></i> ${p.type}</h3>
-    <div class="title">${p.title}</div><div class="desc">${p.desc}</div>
-    <span class="stack-info">${p.stack}</span></div>
-    <div class="card-footer">
-      <span class="status-badge ${p.status}">${STATUS[p.status]||p.status}</span>
-      ${p.repoUrl?`<a href="${p.repoUrl}" target="_blank" rel="noopener" class="repo-link"><img src="https://img.shields.io/badge/VIEW_REPO-181717?style=for-the-badge&logo=github" alt="repo"/></a>`:''}
-    </div></article>`;
-
-  const renderTimeline = items => items.map((it,i)=>`<div class="timeline-item">
-    <div class="timeline-dot" style="${i?'background:var(--text-dim)':''}"></div>
-    <div class="timeline-date" style="${i?'color:var(--text-dim)':''}">${it.period}</div>
-    <div class="timeline-title">${it.title}</div>
-    <div class="timeline-desc">${it.desc}${(it.highlights||[]).map(h=>`<span class="growth-badge">${h}</span>`).join('')}</div>
-  </div>`).join('');
-
-  function renderPage(profile, projects) {
-    document.title = profile.site.title;
-    const sorted = [...projects].sort((a,b) => (b.featured?1:0) - (a.featured?1:0));
-    const creds = Array.isArray(profile.credentials) ? profile.credentials : [profile.credentials];
-
-    document.getElementById('app').innerHTML = `
-      <div class="center-wrapper">
-        <div class="hire-status"><i data-lucide="check-circle-2"></i> ${profile.hireStatus}</div>
-      </div>
-
-      <header>
-        <h1>Сергей <span>${profile.nameHighlight}</span></h1>
-        <div class="status-badges">${profile.badges.map(b=>`<img src="${b}" alt=""/>`).join('')}</div>
-        <p class="hero-desc"><b>${profile.title}</b>${profile.tagline}</p>
-        <div class="skills-row"><img src="${profile.skills}" alt="Skills"/></div>
-        <div class="metrics-row">${profile.metrics.map(m=>`<div class="metric-card"><div class="value">${m.value}</div><div class="label">${m.label}</div></div>`).join('')}</div>
-        <div class="hero-actions">
-          <a href="#cases" class="cta-btn primary"><i data-lucide="folder-open"></i> Смотреть кейсы</a>
-          <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="send"></i> Telegram</a>
+<div class="container">
+    <div class="center-wrapper">
+        <div class="hire-status">
+            <i data-lucide="check-circle-2"></i>
+            Open for Hire • Remote • Senior Expert
         </div>
-      </header>
+    </div>
 
-      <div class="section-title" id="cases"><span></span> Кейсы & Проекты <span></span></div>
-      <div class="tabs-nav">
+    <header>
+        <h1>Сергей <span>Восканян</span></h1>
+        <p class="hero-desc">
+            <b>AI Automation Architect & Technical PM</b><br>
+            Архитектор умных систем: от сложных ETL-пайплайнов до внедрения AI-агентов. Соединяю инженерный подход и 15 лет маркетинга, чтобы превратить хаос в автономный бизнес-инструмент.
+        </p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 24px;">
+            <img src="https://skillicons.dev/icons?i=python,js,docker,postgres,git,n8n&theme=dark" alt="Skills" />
+        </div>
+    </header>
+
+    <div class="section-title"><span></span> Карьерный путь & Фундамент</div>
+
+    <div class="experience-container">
+        <div class="exp-box">
+            <div class="exp-header"><i data-lucide="history" style="width:16px;"></i> опыт по годам</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 — Наст. время</div>
+                    <div class="timeline-title">AI Marketing & Automation Lead / IT Project Manager</div>
+                    <div class="timeline-desc">
+                        Руководство кросс-функциональной командой. Разработка AI-агентов и ETL-пайплайнов: API → PostgreSQL → Looker Studio.
+                        <span class="growth-badge">Автоматизация рутины 70%</span> <span class="growth-badge">SEO +40%</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--text-dim);"></div>
+                    <div class="timeline-date" style="color: var(--text-dim);">2014 — 2022</div>
+                    <div class="timeline-title">Lead Product Manager / Digital Strategist</div>
+                    <div class="timeline-desc">
+                        Масштабирование 20+ брендов (Edding, DYMO, Parker). Вывод на маркетплейсы, SEO-доминирование в нишах и автоматизация воронки.
+                        <span class="growth-badge">+25–30% ежегодный рост</span> <span class="growth-badge">CPA −20%</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--text-dim);"></div>
+                    <div class="timeline-date" style="color: var(--text-dim);">2013 — 2014</div>
+                    <div class="timeline-title">E-commerce Project Manager / PPC Lead</div>
+                    <div class="timeline-desc">
+                        Запуск интернет-магазина на 1С-Битрикс с нуля. Автоматизация воронки продаж и интеграция с агрегаторами.
+                        <span class="growth-badge">+20% заказов</span> <span class="growth-badge">CPL -25%</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--text-dim);"></div>
+                    <div class="timeline-date" style="color: var(--text-dim);">2009 — 2013</div>
+                    <div class="timeline-title">Руководитель интернет-магазина (E-commerce)</div>
+                    <div class="timeline-desc">
+                        Управление командой и операционкой. Оптимизация логистики (сокращение цикла на 30%).
+                        <span class="growth-badge">+30% заказов</span> <span class="growth-badge">CPL -20%</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--text-dim);"></div>
+                    <div class="timeline-date" style="color: var(--text-dim);">2008 — 2009</div>
+                    <div class="timeline-title">Программист 1С (Системная интеграция)</div>
+                    <div class="timeline-desc">
+                        Внедрение «1С:Предприятие» для строительной отрасли. Миграция данных, доработка конфигураций под ТЗ и автоматизация отчетности для ФНС.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exp-box">
+            <div class="exp-header"><i data-lucide="graduation-cap" style="width:16px;"></i> Образование & сертификаты</div>
+            <div class="cert-badges">
+                <img src="https://img.shields.io/badge/Yandex_Expert_2025-ED1C24?style=for-the-badge&logo=yandex&logoColor=white" alt="Yandex Expert" />
+                <img src="https://img.shields.io/badge/Google_Ads_Certified-4285F4?style=for-the-badge&logo=google-ads&logoColor=white" alt="Google Ads" />
+                <img src="https://img.shields.io/badge/n8n_Expert-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n Expert" />
+            </div>
+            <div class="tags-container">
+                <div class="tag-item"><i data-lucide="check-circle"></i> МГУПП: Кибернетика (Магистр)</div>
+                <div class="tag-item"><i data-lucide="check-circle"></i> Яндекс.Директ PRO (2025)</div>
+                <div class="tag-item"><i data-lucide="check-circle"></i> Гугл Эксперт (2025)</div>
+                <div class="tag-item"><i data-lucide="check-circle"></i> МГТУ им. Баумана: Повышение квалификации</div>
+                <div class="tag-item"><i data-lucide="code"></i> SwiftBook (iOS Dev)</div>
+                <div class="tag-item"><i data-lucide="database"></i> 1С:Предприятие 8.1</div>
+            </div>
+            <div class="exp-header" style="margin-top: 40px;"><i data-lucide="github" style="width:16px;"></i> GitHub Activity</div>
+            <div style="background: rgba(255,255,255,0.01); border-radius: 16px; overflow: hidden; border: 1px solid var(--border);">
+                <img src="https://raw.githubusercontent.com/SerVoskanyan/SerVoskanyan/output/github-contribution-grid-snake.svg" alt="Activity" style="width: 100%; display: block;">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title"><span></span> Кейсы & Проекты</div>
+
+    <div class="tabs-nav">
         <button class="tab-btn active" data-filter="all"><i data-lucide="layout-grid"></i> Все</button>
         <button class="tab-btn" data-filter="ai"><i data-lucide="zap"></i> AI & Automation</button>
-      </div>
-      <div class="projects-grid" id="projects-grid">${sorted.map(renderCard).join('')}</div>
+        <button class="tab-btn" data-filter="marketing"><i data-lucide="trending-up"></i> Marketing & SEO</button>
+    </div>
 
-      <div class="section-title"><span></span> Карьерный путь <span></span></div>
-      <div class="experience-grid">
-        <div class="exp-box">
-          <div class="exp-header"><i data-lucide="history"></i> опыт по годам</div>
-          <div class="timeline">${renderTimeline(profile.experience)}</div>
-        </div>
-        <div class="exp-box">
-          <div class="exp-header"><i data-lucide="graduation-cap"></i> образование & сертификаты</div>
-          <div class="tags-container">${creds.map(c=>`<div class="tag-item"><i data-lucide="check-circle"></i> ${c}</div>`).join('')}</div>
-        </div>
-      </div>
+    <div class="bento-grid" id="projects-grid">
 
-      <div class="contact-cta">
+        <div class="card" data-category="ai">
+            <div>
+                <h3><i data-lucide="zap"></i> AI Automation</h3>
+                <div class="title">AutoShedevrum: AI Blogger</div>
+                <div class="desc">Агент ведет канал в Шедеврум и Telegram через Alice AI. Автоматически ищет тренды, регенерирует промпты и публикует контент. Управление с тг-бота.</div>
+                <span class="stack-info">Python • PocketBase • Docker • Gemini • Telegram API</span>
+            </div>
+            <div class="card-footer">
+                <span class="status-badge live">Live</span>
+                <a href="https://github.com/SerVoskanyan/AutoShedevrum-OpenSource" target="_blank" rel="noopener" class="badge-btn">
+                    <img src="https://img.shields.io/badge/VIEW_REPO-181717?style=for-the-badge&logo=github" alt="Repo" />
+                </a>
+            </div>
+        </div>
+
+        <div class="card" data-category="ai">
+            <div>
+                <h3><i data-lucide="layout"></i> No-Code Solution</h3>
+                <div class="title">LinkedIn Jobs Monitor</div>
+                <div class="desc">Авто-выгрузка вакансий: LinkedIn → Apify → Google Sheets. Workflow в репо, live-сервер снят.</div>
+                <span class="stack-info">n8n • Apify • LinkedIn Jobs • Google Sheets</span>
+            </div>
+            <div class="card-footer">
+                <span class="status-badge archived">Archived</span>
+                <a href="https://github.com/SerVoskanyan/My-cases/tree/main/linkedin-jobs-monitor" target="_blank" rel="noopener" class="badge-btn">
+                    <img src="https://img.shields.io/badge/VIEW_REPO-181717?style=for-the-badge&logo=github" alt="Repo" />
+                </a>
+            </div>
+        </div>
+
+        <div class="card" data-category="ai marketing">
+            <div>
+                <h3><i data-lucide="search"></i> SEO AI</h3>
+                <div class="title">Auto SEO-Audit Agent</div>
+                <div class="desc">ИИ‑агент анализирует данные GSC и Яндекс Вебмастера. Находит проблемы и пишет рекомендации.</div>
+                <span class="stack-info">n8n • OpenAI • Google Sheets • GSC API</span>
+            </div>
+            <div class="card-footer">
+                <span class="status-badge live">Live</span>
+                <a href="https://github.com/SerVoskanyan/My-cases/tree/main/Auto_SEO-Audit_Agent" target="_blank" rel="noopener" class="badge-btn">
+                    <img src="https://img.shields.io/badge/VIEW_REPO-181717?style=for-the-badge&logo=github" alt="Repo" />
+                </a>
+            </div>
+        </div>
+
+        <div class="card" data-category="ai marketing">
+            <div>
+                <h3><i data-lucide="file-text"></i> Content Analysis</h3>
+                <div class="title">AI Content Intelligence</div>
+                <div class="desc">Шаблон n8n для глубокого анализа сайтов: конвертирует HTML в Markdown и через GPT-4 формирует отчет.</div>
+                <span class="stack-info">n8n • GPT-4 • HTTP Request • Google Sheets</span>
+            </div>
+            <div class="card-footer"><span class="status-badge archived">Archived</span></div>
+        </div>
+
+        <div class="card" data-category="ai">
+            <div>
+                <h3><i data-lucide="form-input"></i> Lead Capture</h3>
+                <div class="title">No-Code Order System</div>
+                <div class="desc">Мост для статических сайтов: Webhook → Google Sheets + TG уведомления.</div>
+                <span class="stack-info">n8n • Webhook • Google Sheets • HTML • Telegram</span>
+            </div>
+            <div class="card-footer"><span class="status-badge archived">Archived</span></div>
+        </div>
+
+        <div class="card" data-category="ai marketing">
+            <div>
+                <h3><i data-lucide="message-square"></i> Chat Automation</h3>
+                <div class="title">Jivo Intelligence Bridge</div>
+                <div class="desc">Интеграция JivoSite: проброс диалогов в Google Sheets и Telegram.</div>
+                <span class="stack-info">n8n • JivoSite • Google Sheets • Telegram API</span>
+            </div>
+            <div class="card-footer"><span class="status-badge archived">Archived</span></div>
+        </div>
+
+        <div class="card" data-category="ai">
+            <div>
+                <h3><i data-lucide="mail"></i> Email Automation</h3>
+                <div class="title">Intelligent Email Processor</div>
+                <div class="desc">Авто-обработка писем (IMAP): очистка от мусора и форматирование заявок в CRM.</div>
+                <span class="stack-info">n8n • IMAP • JS Code • Google Sheets • Telegram</span>
+            </div>
+            <div class="card-footer"><span class="status-badge archived">Archived</span></div>
+        </div>
+
+        <div class="card" data-category="ai marketing">
+            <div>
+                <h3><i data-lucide="rss"></i> Content Distribution</h3>
+                <div class="title">RSS Omni-Channel Hub</div>
+                <div class="desc">Система мониторинга RSS-каналов с авто-трансляцией в Telegram.</div>
+                <span class="stack-info">Make.com • Telegram API • RSS Feed</span>
+            </div>
+            <div class="card-footer"><span class="status-badge archived">Archived</span></div>
+        </div>
+
+        <div class="card" data-category="ai">
+            <div>
+                <h3><i data-lucide="bot"></i> Conversational AI</h3>
+                <div class="title">AI Dialog Logger (Gemini)</div>
+                <div class="desc">Telegram‑ассистент с памятью: логирует диалоги и отвечает через Gemini.</div>
+                <span class="stack-info">n8n • Google Sheets • Gemini API • Telegram API</span>
+            </div>
+            <div class="card-footer"><span class="status-badge private">Private</span></div>
+        </div>
+
+        <div class="card" data-category="marketing">
+            <div>
+                <h3><i data-lucide="trending-up"></i> Growth Marketing</h3>
+                <div class="title">Lead PM: Global Brands</div>
+                <div class="desc">Масштабирование Parker, Edding и DYMO. Построение сквозной аналитики.</div>
+                <span class="stack-info">E-commerce • SEO • BI Analytics</span>
+            </div>
+            <div class="card-footer">
+                <a href="https://servoskanyan.my.canva.site/" target="_blank" rel="noopener" class="badge-btn">
+                    <img src="https://img.shields.io/badge/VIEW_CASE-FF4154?style=for-the-badge&logo=canva" alt="Canva" />
+                </a>
+            </div>
+        </div>
+
+        <div class="card" data-category="ai">
+            <div>
+                <h3><i data-lucide="refresh-cw"></i> Engineering</h3>
+                <div class="title">Legacy Transformation</div>
+                <div class="desc">Перевод систем с 1С на современные стеки. Автоматизация отчетности.</div>
+                <span class="stack-info">1C:Enterprise • SQL • Python</span>
+            </div>
+            <div class="card-footer"><span class="status-badge private">Private</span></div>
+        </div>
+    </div>
+
+    <div class="section-title"><span></span> AI Ecosystem & Media</div>
+    <div class="eco-grid">
+        <a href="https://t.me/Ser_Shedevrum" target="_blank" rel="noopener" class="eco-card">
+            <div class="eco-icon" style="background: var(--telegram);"><i data-lucide="bot"></i></div>
+            <div class="eco-info"><h4>AutoShedevrum</h4><p>Telegram канал AI-блогера</p></div>
+        </a>
+        <a href="https://t.me/Ser_NanoBanana" target="_blank" rel="noopener" class="eco-card">
+            <div class="eco-icon" style="background: none; overflow: visible;">
+                <img src="https://img.icons8.com/color/96/banana.png" alt="Nano Banana" style="width: 120%; height: 120%; filter: drop-shadow(0 0 5px rgba(250,204,21,0.4));">
+            </div>
+            <div class="eco-info"><h4>Nano Banana</h4><p>AI Lab & Community</p></div>
+        </a>
+        <a href="https://www.youtube.com/@artserikovoskanyan1518" target="_blank" rel="noopener" class="eco-card">
+            <div class="eco-icon" style="background: var(--youtube);">
+                <img src="https://cdn.simpleicons.org/youtube/white" alt="YouTube" style="width: 60%; height: 60%;">
+            </div>
+            <div class="eco-info"><h4>YouTube Channel</h4><p>AI Music & Video Clips</p></div>
+        </a>
+        <a href="https://suno.com/@artserikov" target="_blank" rel="noopener" class="eco-card">
+            <div class="eco-icon" style="background: #111; border: 1px solid var(--border);">
+                <img src="https://cdn.simpleicons.org/suno/white" alt="Suno" style="width: 55%; height: 55%;">
+            </div>
+            <div class="eco-info"><h4>Suno Profile</h4><p>Generative Audio Tracks</p></div>
+        </a>
+    </div>
+
+    <div class="contact-cta">
         <h2>Давайте создадим что-то крутое</h2>
         <p>Ищете архитектора для автоматизации бизнеса или внедрения AI? Я на связи.</p>
         <div class="contact-buttons">
-          <a href="${profile.contacts.telegram}" target="_blank" rel="noopener" class="cta-btn primary"><i data-lucide="send"></i> Telegram</a>
-          <a href="${profile.contacts.email}" class="cta-btn secondary"><i data-lucide="mail"></i> Email</a>
-          <a href="${profile.contacts.github}" target="_blank" rel="noopener" class="cta-btn secondary"><i data-lucide="github"></i> GitHub</a>
+            <a href="https://t.me/Serik_V" target="_blank" rel="noopener" class="cta-btn primary">
+                <i data-lucide="send"></i> Написать в Telegram
+            </a>
+            <a href="mailto:ser@voskanjan.ru" class="cta-btn secondary">
+                <i data-lucide="mail"></i> Email
+            </a>
+            <a href="https://github.com/SerVoskanyan" target="_blank" rel="noopener" class="cta-btn secondary">
+                <i data-lucide="github"></i> GitHub
+            </a>
         </div>
-      </div>
-      <footer><p>© 2026 ${profile.name} • ${profile.title}</p></footer>`;
+    </div>
 
+    <footer>
+        <p>© 2026 Сергей Восканян • AI Automation Architect & Technical PM</p>
+        <div class="footer-links">
+            <a href="https://t.me/Serik_V" target="_blank" rel="noopener"><i data-lucide="send"></i></a>
+            <a href="https://github.com/SerVoskanyan" target="_blank" rel="noopener"><i data-lucide="github"></i></a>
+        </div>
+    </footer>
+</div>
+
+<script>
     lucide.createIcons();
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter, grid = document.getElementById('projects-grid');
-      grid.style.opacity = '0';
-      setTimeout(() => {
-        grid.querySelectorAll('.card').forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f));
-        grid.style.opacity = '1';
-      }, 150);
-    }));
-  }
-
-  async function loadJson(url, id) {
-    try { const r = await fetch(url); if (!r.ok) throw 0; return await r.json(); }
-    catch { return JSON.parse(document.getElementById(id).textContent); }
-  }
-
-  async function init() {
-    try {
-      const profile = await loadJson('./data/profile.json', 'profile-data');
-      const { projects } = await loadJson('./data/projects.json', 'projects-data');
-      renderPage(profile, projects);
-    } catch { document.getElementById('app').innerHTML = '<p class="loading">Ошибка. Запустите <code>./serve.sh</code></p>'; }
-  }
-  init();
+    const filterButtons = document.querySelectorAll('.tab-btn');
+    const projectCards = document.querySelectorAll('.card');
+    const grid = document.getElementById('projects-grid');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const filterValue = button.getAttribute('data-filter');
+            grid.style.opacity = '0';
+            setTimeout(() => {
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category').split(' ');
+                    card.classList.toggle('hidden', filterValue !== 'all' && !categories.includes(filterValue));
+                });
+                grid.style.opacity = '1';
+            }, 300);
+        });
+    });
 </script>
 </body>
 </html>
