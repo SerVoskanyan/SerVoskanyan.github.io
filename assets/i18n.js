@@ -248,8 +248,8 @@ const translations = {
     'eco.nanobanana.p': 'AI Lab & Community',
     'eco.youtube.p': 'AI Music & Video Clips',
     'eco.suno.p': 'Generative Audio Tracks',
-    'contact.title': 'Եկեք ստեղծենք մ something cool',
-    'contact.sub': 'Փնտրում եք ավտոմատացման կամ AI ճարտարապետ？ Ես հասանելի եմ։',
+    'contact.title': 'Եկեք ստեղծենք ինչ-որ հզոր',
+    'contact.sub': 'Փնտրու՞մ եք ավտոմատացման կամ AI ճարտարապետ։ Կապի մեջ եմ։',
     'contact.tg': 'Գրել Telegram-ում',
     'footer.copy': '© 2026 Սերգեյ Վոսկանյան • AI Automation Architect & Technical PM',
     'lang.label': 'Լեզուների ընտրություն'
