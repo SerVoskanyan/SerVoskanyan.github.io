@@ -1,18 +1,18 @@
 const translations = {
   ru: {
     'meta.title': 'Сергей Восканян | AI Automation Architect & Technical PM',
-    'hire.status': 'Open for Hire • Remote • Senior Expert',
+    'hire.status': 'Открыт к предложениям • Remote • Senior',
     'hero.name.first': 'Сергей',
     'hero.name.last': 'Восканян',
     'hero.role': 'AI Automation Architect & Technical PM',
     'hero.bio': 'Архитектор умных систем: от сложных ETL-пайплайнов до внедрения AI-агентов. Соединяю инженерный подход и 15 лет маркетинга, чтобы превратить хаос в автономный бизнес-инструмент.',
     'hero.hint': 'Парсинг • AI-скоринг • cover letter • автоотклики | Swagger • Docker • до 70% меньше рутины',
     'hero.scroll': 'Смотреть кейсы',
-    'section.career': 'Карьерный путь & Фундамент',
-    'exp.timeline': 'опыт по годам',
-    'exp.education': 'Образование & сертификаты',
-    'edu.universities': 'Вузы',
-    'edu.certs': 'Сертификаты & курсы',
+    'section.career': 'Карьера и квалификация',
+    'exp.timeline': 'Опыт работы',
+    'exp.education': 'Образование и сертификаты',
+    'edu.universities': 'Высшее образование',
+    'edu.certs': 'Курсы и сертификаты',
     'edu.mgupp.name': 'МГУПП',
     'edu.mgtu.name': 'МГТУ им. Баумана',
     'edu.mai.name': 'МАИ',
@@ -26,14 +26,17 @@ const translations = {
     'cert.swiftbook': 'SwiftBook (iOS Dev)',
     'cert.1c': '1С:Предприятие 8.1',
     'exp.github': 'GitHub Activity',
-    'section.cases': 'Кейсы & Проекты',
+    'section.cases': 'Кейсы и проекты',
     'tab.all': 'Все',
-    'tab.ai': 'AI & Automation',
-    'tab.marketing': 'Marketing & SEO',
-    'label.featured': 'Featured',
+    'tab.ai': 'AI и Автоматизация',
+    'tab.marketing': 'Маркетинг и SEO',
+    'label.featured': 'Главное',
     'status.live': 'Live',
-    'status.archived': 'Archived',
-    'status.private': 'Private',
+    'status.archived': 'В архиве',
+    'status.private': 'Приватный',
+    'btn.demo': 'Демо',
+    'btn.repo': 'Репозиторий',
+    'btn.case': 'Смотреть кейс',
     'status.workflow_repo': 'workflow в репо',
     'status.code_on_request': 'код по запросу',
     'cat.seo_ai': 'SEO AI',
@@ -130,6 +133,9 @@ const translations = {
     'status.live': 'Live',
     'status.archived': 'Archived',
     'status.private': 'Private',
+    'btn.demo': 'VIEW DEMO',
+    'btn.repo': 'VIEW REPO',
+    'btn.case': 'VIEW CASE',
     'status.workflow_repo': 'workflow in repo',
     'status.code_on_request': 'code on request',
     'cat.seo_ai': 'SEO AI',
@@ -195,6 +201,19 @@ const translations = {
 
 const LOCALE_MAP = { ru: 'ru-RU', en: 'en-US' };
 
+const BADGE_STYLES = {
+  demo: '000000?style=for-the-badge&logo=vercel&logoColor=white',
+  repo: '181717?style=for-the-badge&logo=github',
+  case: 'FF4154?style=for-the-badge&logo=canva'
+};
+
+function shieldBadgeUrl(kind, label) {
+  const style = BADGE_STYLES[kind];
+  if (!style) return '';
+  const slug = encodeURIComponent(String(label).trim().replace(/\s+/g, '_'));
+  return `https://img.shields.io/badge/${slug}-${style}`;
+}
+
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.ru;
   document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
@@ -210,6 +229,15 @@ function applyLanguage(lang) {
   });
 
   if (dict['meta.title']) document.title = dict['meta.title'];
+
+  document.querySelectorAll('[data-i18n-badge]').forEach((img) => {
+    const kind = img.getAttribute('data-i18n-badge');
+    const key = `btn.${kind}`;
+    if (dict[key] !== undefined) {
+      img.src = shieldBadgeUrl(kind, dict[key]);
+      img.alt = dict[key];
+    }
+  });
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
