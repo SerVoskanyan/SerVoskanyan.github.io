@@ -2,6 +2,8 @@ const translations = {
   ru: {
     'meta.title': 'Сергей Восканян | AI Automation Architect & Technical PM',
     'hire.status': 'Open for Hire • Remote • Senior Expert',
+    'hero.name.first': 'Сергей',
+    'hero.name.last': 'Восканян',
     'hero.role': 'AI Automation Architect & Technical PM',
     'hero.bio': 'Архитектор умных систем: от сложных ETL-пайплайнов до внедрения AI-агентов. Соединяю инженерный подход и 15 лет маркетинга, чтобы превратить хаос в автономный бизнес-инструмент.',
     'hero.hint': 'Парсинг • AI-скоринг • cover letter • автоотклики | Swagger • Docker • до 70% меньше рутины',
@@ -11,9 +13,18 @@ const translations = {
     'exp.education': 'Образование & сертификаты',
     'edu.universities': 'Вузы',
     'edu.certs': 'Сертификаты & курсы',
+    'edu.mgupp.name': 'МГУПП',
+    'edu.mgtu.name': 'МГТУ им. Баумана',
+    'edu.mai.name': 'МАИ',
     'edu.mgupp': 'Кибернетика — магистр',
     'edu.mgtu': 'Повышение квалификации',
     'edu.mai': 'Московский авиационный институт — повышение квалификации',
+    'cert.yandex': 'Яндекс.Директ PRO (2025)',
+    'cert.google': 'Google Ads Expert (2025)',
+    'cert.n8n': 'n8n Expert',
+    'cert.bitrix': 'Bitrix24 Specialist',
+    'cert.swiftbook': 'SwiftBook (iOS Dev)',
+    'cert.1c': '1С:Предприятие 8.1',
     'exp.github': 'GitHub Activity',
     'section.cases': 'Кейсы & Проекты',
     'tab.all': 'Все',
@@ -87,6 +98,8 @@ const translations = {
   en: {
     'meta.title': 'Sergey Voskanyan | AI Automation Architect & Technical PM',
     'hire.status': 'Open for Hire • Remote • Senior Expert',
+    'hero.name.first': 'Sergey',
+    'hero.name.last': 'Voskanyan',
     'hero.role': 'AI Automation Architect & Technical PM',
     'hero.bio': 'Architect of intelligent systems: from complex ETL pipelines to AI agents. I combine engineering with 15 years in marketing to turn chaos into autonomous business tools.',
     'hero.hint': 'Parsing • AI scoring • cover letter • auto-apply | Swagger • Docker • up to 70% less routine',
@@ -96,9 +109,18 @@ const translations = {
     'exp.education': 'Education & certifications',
     'edu.universities': 'Universities',
     'edu.certs': 'Certifications & courses',
+    'edu.mgupp.name': 'MGUPP (Moscow State University of Food Production)',
+    'edu.mgtu.name': 'Bauman Moscow State Technical University',
+    'edu.mai.name': 'MAI (Moscow Aviation Institute)',
     'edu.mgupp': 'Cybernetics — Master\'s degree',
     'edu.mgtu': 'Professional development',
-    'edu.mai': 'Moscow Aviation Institute — professional development',
+    'edu.mai': 'Professional development',
+    'cert.yandex': 'Yandex Direct PRO (2025)',
+    'cert.google': 'Google Ads Expert (2025)',
+    'cert.n8n': 'n8n Expert',
+    'cert.bitrix': 'Bitrix24 Specialist',
+    'cert.swiftbook': 'SwiftBook (iOS Dev)',
+    'cert.1c': '1C:Enterprise 8.1',
     'exp.github': 'GitHub Activity',
     'section.cases': 'Cases & projects',
     'tab.all': 'All',
@@ -169,98 +191,13 @@ const translations = {
     'footer.copy': '© 2026 Sergey Voskanyan • AI Automation Architect & Technical PM',
     'lang.label': 'Language'
   },
-  hy: {
-    'meta.title': 'Սերգեյ Վոսկանյան | AI Automation Architect & Technical PM',
-    'hire.status': 'Open for Hire • Remote • Senior Expert',
-    'hero.role': 'AI Automation Architect & Technical PM',
-    'hero.bio': 'Խելացի համակարգերի ճարտարապետ՝ բարդ ETL pipeline-ներից մինչև AI ագենտներ։ 15 տարի մարքեթինգի փորձը միավորում եմ ինժեներական մոտեցման հետ՝ քաոսը դարձնելու ինքնակառավարվող բիզնես գործիքի։',
-    'hero.hint': 'Parsing • AI-scoring • cover letter • ավտո-դիմում | Swagger • Docker • մինչև 70% պակաս ռուտին',
-    'hero.scroll': 'Դիտել նախագծերը',
-    'section.career': 'Կարիերայի ուղի և հիմք',
-    'exp.timeline': 'փորձը ըստ տարիների',
-    'exp.education': 'Կրթություն և վկայականներ',
-    'edu.universities': 'Համալսարաններ',
-    'edu.certs': 'Վկայականներ և դասընթացներ',
-    'edu.mgupp': 'Կիբերնետика — մագիստրոս',
-    'edu.mgtu': 'Կвалификациայի բարձրացում',
-    'edu.mai': 'MAI — կвалификациայի բարձրացում',
-    'exp.github': 'GitHub Activity',
-    'section.cases': 'Դեպքեր և նախագծեր',
-    'tab.all': 'Բոլորը',
-    'tab.ai': 'AI & Automation',
-    'tab.marketing': 'Marketing & SEO',
-    'label.featured': 'Featured',
-    'status.live': 'Live',
-    'status.archived': 'Archived',
-    'status.private': 'Private',
-    'status.workflow_repo': 'workflow repo-ում',
-    'status.code_on_request': 'кոդը հարցման դեպքում',
-    'cat.seo_ai': 'SEO AI',
-    'cat.fullstack_ai': 'Full-Stack AI',
-    'cat.ai_automation': 'AI Automation',
-    'cat.nocode': 'No-Code Solution',
-    'cat.content_analysis': 'Content Analysis',
-    'cat.lead_capture': 'Lead Capture',
-    'cat.chat_automation': 'Chat Automation',
-    'cat.email_automation': 'Email Automation',
-    'cat.content_distribution': 'Content Distribution',
-    'cat.conversational_ai': 'Conversational AI',
-    'cat.growth_marketing': 'Growth Marketing',
-    'cat.engineering': 'Engineering',
-    'case.seo_tool.desc': 'Կայքերի արագ SEO աուդիտի սervис։ Վերլուծում է tag-երը, կառուցվածքը և պատկերները, հաշվարկում SEO Score և տալիս խորհուրդներ։',
-    'case.job_hunter.desc': 'Բազմագentային հարթակ ավտոմատ աշխատանքի որոնման համար։ Parse է աղբյուրները, LLM-scoring-ով ֆիլտրում, резюме-ն DB է տեղադրում և cover letter է գեներացնում։',
-    'case.shedevrum.desc': 'Ագent-ը Shedevrum և Telegram ալիքներ է վարում Alice AI-ով։ Գտնում է trend-երը, վերագեներացնում prompt-երը և հրապարակում контент։ Կառավարում Telegram bot-ից։',
-    'case.seo_agent.desc': 'AI ագենտը վերլուծում է GSC և Yandex Webmaster տվյալները։ Գտնում է խնդիրներ և գրում խորհուրդներ։',
-    'case.linkedin.desc': 'Մini լուծում վакансiaների ավտո-արտահանման համար՝ LinkedIn → Apify → Google Sheets։ Keyword-ֆիլտրացիա։',
-    'case.content_intel.desc': 'n8n шablon կայքերի խгубok վերլուծության համար՝ HTML → Markdown, ապա GPT-4-ով հաշվետվություն։',
-    'case.order.desc': 'Կամուրջ static կայքերի համար՝ Webhook → Google Sheets + Telegram ծանուցումներ։',
-    'case.jivo.desc': 'JivoSite ինtegracia՝ դialogները Google Sheets և Telegram։',
-    'case.email.desc': 'Ինչ-ի ավտոմատ մշակում (IMAP)՝ աղբյուրից մաքրում և CRM-ի համար ձևավորում։',
-    'case.rss.desc': 'RSS մոնitoring ավտոմատ հեռարձակմամբ Telegram։',
-    'case.dialog.desc': 'Telegram ասistent հիշողությամբ՝ dialog-ների log և պատասխաններ Gemini-ով։',
-    'case.brands.desc': 'Parker, Edding և DYMO բрендների մասшtabаցում։ End-to-end analytics։',
-    'case.legacy.desc': 'Համակարգերի տեղափոխում 1C-ից современный stack-եր։ Հաշվետվության ավտոմատացում։',
-    'tl.1.date': '2023 — մինչ օրս',
-    'tl.1.title': 'AI Marketing & Automation Lead / IT Project Manager',
-    'tl.1.desc': 'Cross-functional թիմի ղեկավարում։ AI ագենտներ և ETL pipeline-ներ՝ API → PostgreSQL → Looker Studio։',
-    'tl.1.b1': '70% ռուտինի ավտոմատացում',
-    'tl.1.b2': 'SEO +40%',
-    'tl.2.date': '2014 — 2022',
-    'tl.2.title': 'Lead Product Manager / Digital Strategist',
-    'tl.2.desc': '20+ бренд (Edding, DYMO, Parker) մասшtabаցում։ Marketplace, SEO, funnel ավտոմատացում։',
-    'tl.2.b1': '+25–30% տարեկան աճ',
-    'tl.2.b2': 'CPA −20%',
-    'tl.3.date': '2013 — 2014',
-    'tl.3.title': 'E-commerce Project Manager / PPC Lead',
-    'tl.3.desc': '1C-Bitrix ինтернет-магазин sıfırdan։ Վաճառքի funnel ավտոմատացում և aggregator ինtegracia։',
-    'tl.3.b1': '+20% պատվերներ',
-    'tl.3.b2': 'CPL -25%',
-    'tl.4.date': '2009 — 2013',
-    'tl.4.title': 'E-commerce Store Lead',
-    'tl.4.desc': 'Թիմի և գործառնությունների կառավարում։ Լոգիստիկայի օպտիմизация (30%  shorter cycle)։',
-    'tl.4.b1': '+30% պատվերներ',
-    'tl.4.b2': 'CPL -20%',
-    'tl.5.date': '2008 — 2009',
-    'tl.5.title': '1C Developer (Systems integration)',
-    'tl.5.desc': '1C:Enterprise ներդրում շինարar sector-ում։ Data migration, custom config, հարկային հաշվետվություն։',
-    'section.eco': 'AI Ecosystem & Media',
-    'eco.shedevrum.p': 'AI բlogger-ի Telegram ալիք',
-    'eco.nanobanana.p': 'AI Lab & Community',
-    'eco.youtube.p': 'AI Music & Video Clips',
-    'eco.suno.p': 'Generative Audio Tracks',
-    'contact.title': 'Եկեք ստեղծենք ինչ-որ հզոր',
-    'contact.sub': 'Փնտրու՞մ եք ավտոմատացման կամ AI ճարտարապետ։ Կապի մեջ եմ։',
-    'contact.tg': 'Գրել Telegram-ում',
-    'footer.copy': '© 2026 Սերգեյ Վոսկանյան • AI Automation Architect & Technical PM',
-    'lang.label': 'Լեզուների ընտրություն'
-  }
 };
 
-const LOCALE_MAP = { ru: 'ru-RU', en: 'en-US', hy: 'hy-AM' };
+const LOCALE_MAP = { ru: 'ru-RU', en: 'en-US' };
 
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.ru;
-  document.documentElement.lang = lang === 'hy' ? 'hy' : (lang === 'en' ? 'en' : 'ru');
+  document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
@@ -283,9 +220,12 @@ function applyLanguage(lang) {
 }
 
 function initI18n() {
-  const saved = localStorage.getItem('lang');
-  const lang = translations[saved] ? saved : 'ru';
-  applyLanguage(lang);
+  let saved = localStorage.getItem('lang');
+  if (saved === 'hy' || !translations[saved]) {
+    saved = 'ru';
+    localStorage.setItem('lang', saved);
+  }
+  applyLanguage(saved);
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
