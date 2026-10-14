@@ -132,13 +132,54 @@
         .section-title {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.5rem;
-            margin: 60px 0 30px;
+            margin: 52px 0 26px;
+            padding-top: 12px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            align-content: flex-start;
             gap: 12px;
+            row-gap: 14px;
             color: var(--text-main);
+            clear: both;
         }
-        .section-title span { flex-grow: 1; height: 1px; background: var(--border); }
+        .section-title > span:first-child {
+            flex: 1 1 100%;
+            order: 2;
+            height: 1px;
+            min-height: 1px;
+            background: var(--border);
+            margin-top: 2px;
+        }
+        .section-title > span:last-child {
+            order: 1;
+            flex: 0 1 auto;
+            height: auto;
+            background: none;
+            line-height: 1.3;
+        }
+
+        .cases-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+            padding-top: 8px;
+        }
+        .cases-section .section-title {
+            margin: 0;
+            padding-top: 0;
+        }
+        .cases-section .tabs-nav {
+            margin: 0 0 28px;
+            padding-top: 0;
+            clear: both;
+        }
+
+        .section-title + .experience-container,
+        .section-title + .eco-grid {
+            margin-top: 4px;
+        }
 
         .tabs-nav {
             display: flex;
@@ -425,7 +466,17 @@
             .card { padding: 24px; }
             .contact-cta { padding: 40px 20px; }
             .contact-cta h2 { font-size: 1.8rem; }
-            .section-title { margin: 40px 0 20px; }
+            .section-title {
+                margin: 36px 0 22px;
+                padding-top: 16px;
+                font-size: 1.35rem;
+                row-gap: 12px;
+            }
+            .cases-section {
+                margin-top: 28px;
+                padding-top: 12px;
+                gap: 18px;
+            }
         }
 
         footer { margin-top: 50px; padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
@@ -464,6 +515,7 @@
         </div>
     </header>
 
+    <div class="cases-section">
     <div class="section-title"><span></span> <span data-i18n="section.cases">Кейсы и проекты</span></div>
 
     <div class="tabs-nav">
@@ -668,6 +720,7 @@
             </div>
         </div>
 
+    </div>
     </div>
 
     <div class="section-title"><span></span> <span data-i18n="section.career">Карьера и квалификация</span></div>
